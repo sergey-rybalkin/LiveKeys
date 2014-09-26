@@ -37,6 +37,7 @@ public:
     BOOL NotifyKeyUp ( DWORD vkCode ) ;
 
 private:
-    VOID SwitchLayout ( ) ; // does all the work - switches layout in the foreground window
-    bool m_bShiftPressed ; // indicates whether previous keyboard event was shift key down.
+
+    VOID SetLayout ( DWORD dwLayout ) ; // switches keyboard layout in the foreground window
+    DWORD m_dwPrevKey ; // contains code of the currently pressed key.
 };

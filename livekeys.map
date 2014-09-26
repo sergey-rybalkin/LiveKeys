@@ -1,12 +1,12 @@
  livekeys
 
- Timestamp is 52618431 (Fri Oct 18 21:55:45 2013)
+ Timestamp is 5425689c (Fri Sep 26 16:22:36 2014)
 
  Preferred load address is 0000000140000000
 
  Start         Length     Name                   Class
- 0001:00000000 00001fd2H .text$mn                CODE
- 0001:00001fe0 000000cbH .text$x                 CODE
+ 0001:00000000 00002022H .text$mn                CODE
+ 0001:00002030 000000cbH .text$x                 CODE
  0002:00000000 00000330H .idata$5                DATA
  0002:00000330 00000008H .CRT$XCA                DATA
  0002:00000338 00000008H .CRT$XCAA               DATA
@@ -23,103 +23,104 @@
  0002:00000ae8 00000008H .rtc$IZZ                DATA
  0002:00000af0 00000008H .rtc$TAA                DATA
  0002:00000af8 00000008H .rtc$TZZ                DATA
- 0002:00000b00 00000234H .xdata                  DATA
- 0002:00000d34 00000000H .edata                  DATA
- 0002:00000d34 00000064H .idata$2                DATA
- 0002:00000d98 00000014H .idata$3                DATA
- 0002:00000db0 00000330H .idata$4                DATA
- 0002:000010e0 00000720H .idata$6                DATA
+ 0002:00000b00 0000024cH .xdata                  DATA
+ 0002:00000d4c 00000000H .edata                  DATA
+ 0002:00000d4c 00000064H .idata$2                DATA
+ 0002:00000db0 00000014H .idata$3                DATA
+ 0002:00000dc8 00000330H .idata$4                DATA
+ 0002:000010f8 00000720H .idata$6                DATA
  0003:00000000 000000a8H .data                   DATA
  0003:000000a8 00000115H .data$r                 DATA
  0003:000001c0 00000630H .bss                    DATA
- 0004:00000000 00000258H .pdata                  DATA
+ 0004:00000000 00000264H .pdata                  DATA
  0005:00000000 00000298H .rsrc$01                DATA
  0005:000002a0 000221d8H .rsrc$02                DATA
 
   Address         Publics by Value              Rva+Base               Lib:Object
 
- 0000:00000000       __guard_fids_table         0000000000000000     <absolute>
- 0000:00000000       __guard_flags              0000000000000000     <absolute>
  0000:00000000       __guard_fids_count         0000000000000000     <absolute>
- 0000:00000000       ___safe_se_handler_count   0000000000000000     <absolute>
  0000:00000000       ___safe_se_handler_table   0000000000000000     <absolute>
+ 0000:00000000       __guard_flags              0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_table         0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_count   0000000000000000     <absolute>
  0000:00000000       __ImageBase                0000000140000000     <linker-defined>
  0001:00000000       ?Initialize@CClipboardHistory@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140001000 f   ClipboardHistory.obj
  0001:00000084       ?HandleHotkey@CClipboardHistory@@UEAAXEK@Z 0000000140001084 f   ClipboardHistory.obj
- 0001:00000244       ?ShutDown@CClipboardHistory@@UEAAXP6AXEE@Z@Z 0000000140001244 f   ClipboardHistory.obj
- 0001:000002b8       ?NotifyDrawClipboard@CClipboardHistory@@QEAAXI_K_J@Z 00000001400012b8 f   ClipboardHistory.obj
- 0001:000003c0       ?PushHistoryPoint@CClipboardHistory@@AEAAXPEA_W_K@Z 00000001400013c0 f   ClipboardHistory.obj
- 0001:00000510       ?PasteHistoryPoint@CClipboardHistory@@AEAAXE@Z 0000000140001510 f   ClipboardHistory.obj
- 0001:0000061c       ?StringCchPrintfW@@YAJPEA_W_KPEB_WZZ 000000014000161c f i ClipboardHistory.obj
- 0001:00000694       ?StringCchCopyW@@YAJPEA_W_KPEB_W@Z 0000000140001694 f i ClipboardHistory.obj
- 0001:0000070c       ?Initialize@CDummyTextGenerator@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 000000014000170c f   DummyTextGenerator.obj
- 0001:00000758       ?HandleHotkey@CDummyTextGenerator@@UEAAXEK@Z 0000000140001758 f   DummyTextGenerator.obj
- 0001:0000094c       ?ShutDown@CDummyTextGenerator@@UEAAXP6AXEE@Z@Z 000000014000194c f   DummyTextGenerator.obj
- 0001:00000958       ?Initialize@CLayoutSwitcher@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140001958 f   LayoutSwitcher.obj
- 0001:00000958       ?Initialize@CLiveKeysHandler@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140001958 f   LiveKeysHandler.obj
- 0001:00000964       ?ShutDown@CLiveKeysHandler@@UEAAXP6AXEE@Z@Z 0000000140001964 f   LiveKeysHandler.obj
- 0001:00000964       ?HandleCommand@CLiveKeysHandler@@UEAAX_J@Z 0000000140001964 f   LiveKeysHandler.obj
- 0001:00000964       ?ShutDown@CLayoutSwitcher@@UEAAXP6AXEE@Z@Z 0000000140001964 f   LayoutSwitcher.obj
- 0001:00000964       ?HandleHotkey@CLiveKeysHandler@@UEAAXEK@Z 0000000140001964 f   LiveKeysHandler.obj
- 0001:00000968       ?NotifyKeyDown@CLayoutSwitcher@@UEAAHK@Z 0000000140001968 f   LayoutSwitcher.obj
- 0001:00000978       ?NotifyKeyUp@CLayoutSwitcher@@UEAAHK@Z 0000000140001978 f   LayoutSwitcher.obj
- 0001:00000a08       _matherr                   0000000140001a08 f   MSVCRT:merr.obj
- 0001:00000a08       ?NotifyKeyDown@CLiveKeysHandler@@UEAAHK@Z 0000000140001a08 f   LiveKeysHandler.obj
- 0001:00000a08       ?NotifyKeyUp@CLiveKeysHandler@@UEAAHK@Z 0000000140001a08 f   LiveKeysHandler.obj
- 0001:00000a08       _wsetargv                  0000000140001a08 f   MSVCRT:wdllargv.obj
- 0001:00000a0c       ?Initialize@CShellExecutor@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140001a0c f   ShellExecutor.obj
- 0001:00000b78       ?HandleHotkey@CShellExecutor@@UEAAXEK@Z 0000000140001b78 f   ShellExecutor.obj
- 0001:00000c24       ?ShutDown@CShellExecutor@@UEAAXP6AXEE@Z@Z 0000000140001c24 f   ShellExecutor.obj
- 0001:00000c88       ?RegisterHotkey@CShellExecutor@@AEAAEPEAUHKEY__@@PEA_WP6AEEII@Z@Z 0000000140001c88 f   ShellExecutor.obj
- 0001:00000d48       wWinMain                   0000000140001d48 f   ShellExtender.obj
- 0001:00001078       ?WindowProc@@YA_JPEAUHWND__@@I_K_J@Z 0000000140002078 f   ShellExtender.obj
- 0001:00001174       ?RegisterHandlerHotkey@@YAEEII@Z 0000000140002174 f   ShellExtender.obj
- 0001:000011e4       ?UnregisterHandlerHotkey@@YAXEE@Z 00000001400021e4 f   ShellExtender.obj
- 0001:00001238       ?LowLevelHookProc@@YA_JH_K_J@Z 0000000140002238 f   ShellExtender.obj
- 0001:0000133c       ?ShowCustomError@@YAXII@Z  000000014000233c f   utils.obj
- 0001:0000146c       ?ShowWin32Error@@YAXKII@Z  000000014000246c f   utils.obj
- 0001:00001520       ?Initialize@CZOrderChanger@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140002520 f   ZOrderChanger.obj
- 0001:00001564       ?HandleHotkey@CZOrderChanger@@UEAAXEK@Z 0000000140002564 f   ZOrderChanger.obj
- 0001:000015c8       ?ShutDown@CZOrderChanger@@UEAAXP6AXEE@Z@Z 00000001400025c8 f   ZOrderChanger.obj
- 0001:000015f0       __security_check_cookie    00000001400025f0 f   MSVCRT:amdsecgs.obj
- 0001:00001610       ??3@YAXPEAX@Z              0000000140002610 f   MSVCRT:MSVCR120.dll
- 0001:00001618       ??_Etype_info@@UEAAPEAXI@Z 0000000140002618 f i MSVCRT:ti_inst.obj
- 0001:000019b4       wWinMainCRTStartup         00000001400029b4 f   MSVCRT:wcrtexew.obj
- 0001:000019c8       __raise_securityfailure    00000001400029c8 f   MSVCRT:gs_report.obj
- 0001:00001a14       __report_gsfailure         0000000140002a14 f   MSVCRT:gs_report.obj
- 0001:00001ae8       ??_M@YAXPEAX_KHP6AX0@Z@Z   0000000140002ae8 f   MSVCRT:ehvecdtr.obj
- 0001:00001b48       ?__ArrayUnwind@@YAXPEAX_KHP6AX0@Z@Z 0000000140002b48 f   MSVCRT:ehvecdtr.obj
- 0001:00001b94       ?__CxxUnhandledExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z 0000000140002b94 f   MSVCRT:unhandld.obj
- 0001:00001bcc       __CxxSetUnhandledExceptionFilter 0000000140002bcc f   MSVCRT:unhandld.obj
- 0001:00001be4       _XcptFilter                0000000140002be4 f   MSVCRT:MSVCR120.dll
- 0001:00001bea       _amsg_exit                 0000000140002bea f   MSVCRT:MSVCR120.dll
- 0001:00001bf0       _FindPESection             0000000140002bf0 f   MSVCRT:pesect.obj
- 0001:00001c40       _IsNonwritableInCurrentImage 0000000140002c40 f   MSVCRT:pesect.obj
- 0001:00001c90       _ValidateImageBase         0000000140002c90 f   MSVCRT:pesect.obj
- 0001:00001cc0       __security_init_cookie     0000000140002cc0 f   MSVCRT:gs_support.obj
- 0001:00001d6c       __atonexitinit             0000000140002d6c f   MSVCRT:atonexit.obj
- 0001:00001dbc       _onexit                    0000000140002dbc f   MSVCRT:atonexit.obj
- 0001:00001e6c       atexit                     0000000140002e6c f   MSVCRT:atonexit.obj
- 0001:00001e84       _RTC_Initialize            0000000140002e84 f   MSVCRT:initsect.obj
- 0001:00001ebc       _RTC_Terminate             0000000140002ebc f   MSVCRT:initsect.obj
- 0001:00001ef4       _initterm_e                0000000140002ef4 f   MSVCRT:MSVCR120.dll
- 0001:00001efa       _initterm                  0000000140002efa f   MSVCRT:MSVCR120.dll
- 0001:00001f00       __C_specific_handler       0000000140002f00 f   MSVCRT:MSVCR120.dll
- 0001:00001f06       __crt_debugger_hook        0000000140002f06 f   MSVCRT:MSVCR120.dll
- 0001:00001f0c       __crtUnhandledException    0000000140002f0c f   MSVCRT:MSVCR120.dll
- 0001:00001f12       __crtTerminateProcess      0000000140002f12 f   MSVCRT:MSVCR120.dll
- 0001:00001f18       __crtCapturePreviousContext 0000000140002f18 f   MSVCRT:MSVCR120.dll
- 0001:00001f1e       ?terminate@@YAXXZ          0000000140002f1e f   MSVCRT:MSVCR120.dll
- 0001:00001f24       ?_type_info_dtor_internal_method@type_info@@QEAAXXZ 0000000140002f24 f   MSVCRT:MSVCR120.dll
- 0001:00001f24       ??1type_info@@UEAA@XZ      0000000140002f24 f   MSVCRT:MSVCR120.dll
- 0001:00001f2a       __crtSetUnhandledExceptionFilter 0000000140002f2a f   MSVCRT:MSVCR120.dll
- 0001:00001f30       _lock                      0000000140002f30 f   MSVCRT:MSVCR120.dll
- 0001:00001f36       _unlock                    0000000140002f36 f   MSVCRT:MSVCR120.dll
- 0001:00001f3c       __dllonexit                0000000140002f3c f   MSVCRT:MSVCR120.dll
- 0001:00001f42       IsProcessorFeaturePresent  0000000140002f42 f   kernel32:KERNEL32.dll
- 0001:00001f48       __GSHandlerCheck           0000000140002f48 f   MSVCRT:gshandler.obj
- 0001:00001f68       __GSHandlerCheckCommon     0000000140002f68 f   MSVCRT:gshandler.obj
- 0001:00001fcc       memset                     0000000140002fcc f   MSVCRT:MSVCR120.dll
+ 0001:00000248       ?ShutDown@CClipboardHistory@@UEAAXP6AXEE@Z@Z 0000000140001248 f   ClipboardHistory.obj
+ 0001:000002bc       ?NotifyDrawClipboard@CClipboardHistory@@QEAAXI_K_J@Z 00000001400012bc f   ClipboardHistory.obj
+ 0001:000003c4       ?PushHistoryPoint@CClipboardHistory@@AEAAXPEA_W_K@Z 00000001400013c4 f   ClipboardHistory.obj
+ 0001:00000514       ?PasteHistoryPoint@CClipboardHistory@@AEAAXE@Z 0000000140001514 f   ClipboardHistory.obj
+ 0001:00000620       ?StringCchPrintfW@@YAJPEA_W_KPEB_WZZ 0000000140001620 f i ClipboardHistory.obj
+ 0001:00000698       ?StringCchCopyW@@YAJPEA_W_KPEB_W@Z 0000000140001698 f i ClipboardHistory.obj
+ 0001:00000710       ?Initialize@CDummyTextGenerator@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140001710 f   DummyTextGenerator.obj
+ 0001:0000075c       ?HandleHotkey@CDummyTextGenerator@@UEAAXEK@Z 000000014000175c f   DummyTextGenerator.obj
+ 0001:00000950       ?ShutDown@CDummyTextGenerator@@UEAAXP6AXEE@Z@Z 0000000140001950 f   DummyTextGenerator.obj
+ 0001:0000095c       ?Initialize@CLayoutSwitcher@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 000000014000195c f   LayoutSwitcher.obj
+ 0001:0000095c       ?Initialize@CLiveKeysHandler@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 000000014000195c f   LiveKeysHandler.obj
+ 0001:00000968       ?ShutDown@CLayoutSwitcher@@UEAAXP6AXEE@Z@Z 0000000140001968 f   LayoutSwitcher.obj
+ 0001:00000968       ?ShutDown@CLiveKeysHandler@@UEAAXP6AXEE@Z@Z 0000000140001968 f   LiveKeysHandler.obj
+ 0001:00000968       ?HandleCommand@CLiveKeysHandler@@UEAAX_J@Z 0000000140001968 f   LiveKeysHandler.obj
+ 0001:00000968       ?HandleHotkey@CLiveKeysHandler@@UEAAXEK@Z 0000000140001968 f   LiveKeysHandler.obj
+ 0001:0000096c       ?NotifyKeyDown@CLayoutSwitcher@@UEAAHK@Z 000000014000196c f   LayoutSwitcher.obj
+ 0001:00000974       ?NotifyKeyUp@CLayoutSwitcher@@UEAAHK@Z 0000000140001974 f   LayoutSwitcher.obj
+ 0001:000009b0       ?SetLayout@CLayoutSwitcher@@AEAAXK@Z 00000001400019b0 f   LayoutSwitcher.obj
+ 0001:00000a64       ?NotifyKeyDown@CLiveKeysHandler@@UEAAHK@Z 0000000140001a64 f   LiveKeysHandler.obj
+ 0001:00000a64       _wsetargv                  0000000140001a64 f   MSVCRT:wdllargv.obj
+ 0001:00000a64       ?NotifyKeyUp@CLiveKeysHandler@@UEAAHK@Z 0000000140001a64 f   LiveKeysHandler.obj
+ 0001:00000a64       _matherr                   0000000140001a64 f   MSVCRT:merr.obj
+ 0001:00000a68       ?Initialize@CShellExecutor@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140001a68 f   ShellExecutor.obj
+ 0001:00000bd4       ?HandleHotkey@CShellExecutor@@UEAAXEK@Z 0000000140001bd4 f   ShellExecutor.obj
+ 0001:00000c80       ?ShutDown@CShellExecutor@@UEAAXP6AXEE@Z@Z 0000000140001c80 f   ShellExecutor.obj
+ 0001:00000ce4       ?RegisterHotkey@CShellExecutor@@AEAAEPEAUHKEY__@@PEA_WP6AEEII@Z@Z 0000000140001ce4 f   ShellExecutor.obj
+ 0001:00000da4       wWinMain                   0000000140001da4 f   ShellExtender.obj
+ 0001:000010d4       ?WindowProc@@YA_JPEAUHWND__@@I_K_J@Z 00000001400020d4 f   ShellExtender.obj
+ 0001:000011d0       ?RegisterHandlerHotkey@@YAEEII@Z 00000001400021d0 f   ShellExtender.obj
+ 0001:00001240       ?UnregisterHandlerHotkey@@YAXEE@Z 0000000140002240 f   ShellExtender.obj
+ 0001:00001294       ?LowLevelHookProc@@YA_JH_K_J@Z 0000000140002294 f   ShellExtender.obj
+ 0001:00001398       ?ShowCustomError@@YAXII@Z  0000000140002398 f   utils.obj
+ 0001:000014c8       ?ShowWin32Error@@YAXKII@Z  00000001400024c8 f   utils.obj
+ 0001:0000157c       ?Initialize@CZOrderChanger@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 000000014000257c f   ZOrderChanger.obj
+ 0001:000015c0       ?HandleHotkey@CZOrderChanger@@UEAAXEK@Z 00000001400025c0 f   ZOrderChanger.obj
+ 0001:00001624       ?ShutDown@CZOrderChanger@@UEAAXP6AXEE@Z@Z 0000000140002624 f   ZOrderChanger.obj
+ 0001:00001640       __security_check_cookie    0000000140002640 f   MSVCRT:amdsecgs.obj
+ 0001:00001660       ??3@YAXPEAX@Z              0000000140002660 f   MSVCRT:MSVCR120.dll
+ 0001:00001668       ??_Etype_info@@UEAAPEAXI@Z 0000000140002668 f i MSVCRT:ti_inst.obj
+ 0001:00001a04       wWinMainCRTStartup         0000000140002a04 f   MSVCRT:wcrtexew.obj
+ 0001:00001a18       __raise_securityfailure    0000000140002a18 f   MSVCRT:gs_report.obj
+ 0001:00001a64       __report_gsfailure         0000000140002a64 f   MSVCRT:gs_report.obj
+ 0001:00001b38       ??_M@YAXPEAX_KHP6AX0@Z@Z   0000000140002b38 f   MSVCRT:ehvecdtr.obj
+ 0001:00001b98       ?__ArrayUnwind@@YAXPEAX_KHP6AX0@Z@Z 0000000140002b98 f   MSVCRT:ehvecdtr.obj
+ 0001:00001be4       ?__CxxUnhandledExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z 0000000140002be4 f   MSVCRT:unhandld.obj
+ 0001:00001c1c       __CxxSetUnhandledExceptionFilter 0000000140002c1c f   MSVCRT:unhandld.obj
+ 0001:00001c34       _XcptFilter                0000000140002c34 f   MSVCRT:MSVCR120.dll
+ 0001:00001c3a       _amsg_exit                 0000000140002c3a f   MSVCRT:MSVCR120.dll
+ 0001:00001c40       _FindPESection             0000000140002c40 f   MSVCRT:pesect.obj
+ 0001:00001c90       _IsNonwritableInCurrentImage 0000000140002c90 f   MSVCRT:pesect.obj
+ 0001:00001ce0       _ValidateImageBase         0000000140002ce0 f   MSVCRT:pesect.obj
+ 0001:00001d10       __security_init_cookie     0000000140002d10 f   MSVCRT:gs_support.obj
+ 0001:00001dbc       __atonexitinit             0000000140002dbc f   MSVCRT:atonexit.obj
+ 0001:00001e0c       _onexit                    0000000140002e0c f   MSVCRT:atonexit.obj
+ 0001:00001ebc       atexit                     0000000140002ebc f   MSVCRT:atonexit.obj
+ 0001:00001ed4       _RTC_Initialize            0000000140002ed4 f   MSVCRT:initsect.obj
+ 0001:00001f0c       _RTC_Terminate             0000000140002f0c f   MSVCRT:initsect.obj
+ 0001:00001f44       _initterm_e                0000000140002f44 f   MSVCRT:MSVCR120.dll
+ 0001:00001f4a       _initterm                  0000000140002f4a f   MSVCRT:MSVCR120.dll
+ 0001:00001f50       __C_specific_handler       0000000140002f50 f   MSVCRT:MSVCR120.dll
+ 0001:00001f56       __crt_debugger_hook        0000000140002f56 f   MSVCRT:MSVCR120.dll
+ 0001:00001f5c       __crtUnhandledException    0000000140002f5c f   MSVCRT:MSVCR120.dll
+ 0001:00001f62       __crtTerminateProcess      0000000140002f62 f   MSVCRT:MSVCR120.dll
+ 0001:00001f68       __crtCapturePreviousContext 0000000140002f68 f   MSVCRT:MSVCR120.dll
+ 0001:00001f6e       ?terminate@@YAXXZ          0000000140002f6e f   MSVCRT:MSVCR120.dll
+ 0001:00001f74       ??1type_info@@UEAA@XZ      0000000140002f74 f   MSVCRT:MSVCR120.dll
+ 0001:00001f74       ?_type_info_dtor_internal_method@type_info@@QEAAXXZ 0000000140002f74 f   MSVCRT:MSVCR120.dll
+ 0001:00001f7a       __crtSetUnhandledExceptionFilter 0000000140002f7a f   MSVCRT:MSVCR120.dll
+ 0001:00001f80       _lock                      0000000140002f80 f   MSVCRT:MSVCR120.dll
+ 0001:00001f86       _unlock                    0000000140002f86 f   MSVCRT:MSVCR120.dll
+ 0001:00001f8c       __dllonexit                0000000140002f8c f   MSVCRT:MSVCR120.dll
+ 0001:00001f92       IsProcessorFeaturePresent  0000000140002f92 f   kernel32:KERNEL32.dll
+ 0001:00001f98       __GSHandlerCheck           0000000140002f98 f   MSVCRT:gshandler.obj
+ 0001:00001fb8       __GSHandlerCheckCommon     0000000140002fb8 f   MSVCRT:gshandler.obj
+ 0001:0000201c       memset                     000000014000301c f   MSVCRT:MSVCR120.dll
  0002:00000000       __imp_RegEnumKeyW          0000000140004000     advapi32:ADVAPI32.dll
  0002:00000008       __imp_RegCloseKey          0000000140004008     advapi32:ADVAPI32.dll
  0002:00000010       __imp_RegQueryInfoKeyW     0000000140004010     advapi32:ADVAPI32.dll
@@ -183,23 +184,23 @@
  0002:000001e0       \177SHELL32_NULL_THUNK_DATA 00000001400041e0     shell32:SHELL32.dll
  0002:000001e8       __imp_GetWindowLongW       00000001400041e8     user32:USER32.dll
  0002:000001f0       __imp_MessageBoxW          00000001400041f0     user32:USER32.dll
- 0002:000001f8       __imp_CallNextHookEx       00000001400041f8     user32:USER32.dll
- 0002:00000200       __imp_UnregisterHotKey     0000000140004200     user32:USER32.dll
- 0002:00000208       __imp_RegisterHotKey       0000000140004208     user32:USER32.dll
- 0002:00000210       __imp_DefWindowProcW       0000000140004210     user32:USER32.dll
- 0002:00000218       __imp_PostQuitMessage      0000000140004218     user32:USER32.dll
- 0002:00000220       __imp_UnhookWindowsHookEx  0000000140004220     user32:USER32.dll
- 0002:00000228       __imp_DestroyWindow        0000000140004228     user32:USER32.dll
- 0002:00000230       __imp_UnregisterClassW     0000000140004230     user32:USER32.dll
- 0002:00000238       __imp_DispatchMessageW     0000000140004238     user32:USER32.dll
- 0002:00000240       __imp_TranslateMessage     0000000140004240     user32:USER32.dll
- 0002:00000248       __imp_GetMessageW          0000000140004248     user32:USER32.dll
- 0002:00000250       __imp_SetWindowsHookExW    0000000140004250     user32:USER32.dll
- 0002:00000258       __imp_CreateWindowExW      0000000140004258     user32:USER32.dll
- 0002:00000260       __imp_RegisterClassExW     0000000140004260     user32:USER32.dll
- 0002:00000268       __imp_GetKeyboardLayout    0000000140004268     user32:USER32.dll
- 0002:00000270       __imp_GetWindowThreadProcessId 0000000140004270     user32:USER32.dll
- 0002:00000278       __imp_PostMessageW         0000000140004278     user32:USER32.dll
+ 0002:000001f8       __imp_PostMessageW         00000001400041f8     user32:USER32.dll
+ 0002:00000200       __imp_CallNextHookEx       0000000140004200     user32:USER32.dll
+ 0002:00000208       __imp_UnregisterHotKey     0000000140004208     user32:USER32.dll
+ 0002:00000210       __imp_RegisterHotKey       0000000140004210     user32:USER32.dll
+ 0002:00000218       __imp_DefWindowProcW       0000000140004218     user32:USER32.dll
+ 0002:00000220       __imp_PostQuitMessage      0000000140004220     user32:USER32.dll
+ 0002:00000228       __imp_UnhookWindowsHookEx  0000000140004228     user32:USER32.dll
+ 0002:00000230       __imp_DestroyWindow        0000000140004230     user32:USER32.dll
+ 0002:00000238       __imp_UnregisterClassW     0000000140004238     user32:USER32.dll
+ 0002:00000240       __imp_DispatchMessageW     0000000140004240     user32:USER32.dll
+ 0002:00000248       __imp_TranslateMessage     0000000140004248     user32:USER32.dll
+ 0002:00000250       __imp_GetMessageW          0000000140004250     user32:USER32.dll
+ 0002:00000258       __imp_SetWindowsHookExW    0000000140004258     user32:USER32.dll
+ 0002:00000260       __imp_CreateWindowExW      0000000140004260     user32:USER32.dll
+ 0002:00000268       __imp_RegisterClassExW     0000000140004268     user32:USER32.dll
+ 0002:00000270       __imp_GetKeyboardLayout    0000000140004270     user32:USER32.dll
+ 0002:00000278       __imp_GetWindowThreadProcessId 0000000140004278     user32:USER32.dll
  0002:00000280       __imp_SendInput            0000000140004280     user32:USER32.dll
  0002:00000288       __imp_LoadStringW          0000000140004288     user32:USER32.dll
  0002:00000290       __imp_SetClipboardData     0000000140004290     user32:USER32.dll
@@ -266,12 +267,12 @@
  0002:00000ae8       __rtc_izz                  0000000140004ae8     MSVCRT:initsect.obj
  0002:00000af0       __rtc_taa                  0000000140004af0     MSVCRT:initsect.obj
  0002:00000af8       __rtc_tzz                  0000000140004af8     MSVCRT:initsect.obj
- 0002:00000d34       __IMPORT_DESCRIPTOR_KERNEL32 0000000140004d34     kernel32:KERNEL32.dll
- 0002:00000d48       __IMPORT_DESCRIPTOR_USER32 0000000140004d48     user32:USER32.dll
- 0002:00000d5c       __IMPORT_DESCRIPTOR_ADVAPI32 0000000140004d5c     advapi32:ADVAPI32.dll
- 0002:00000d70       __IMPORT_DESCRIPTOR_SHELL32 0000000140004d70     shell32:SHELL32.dll
- 0002:00000d84       __IMPORT_DESCRIPTOR_MSVCR120 0000000140004d84     MSVCRT:MSVCR120.dll
- 0002:00000d98       __NULL_IMPORT_DESCRIPTOR   0000000140004d98     kernel32:KERNEL32.dll
+ 0002:00000d4c       __IMPORT_DESCRIPTOR_KERNEL32 0000000140004d4c     kernel32:KERNEL32.dll
+ 0002:00000d60       __IMPORT_DESCRIPTOR_USER32 0000000140004d60     user32:USER32.dll
+ 0002:00000d74       __IMPORT_DESCRIPTOR_ADVAPI32 0000000140004d74     advapi32:ADVAPI32.dll
+ 0002:00000d88       __IMPORT_DESCRIPTOR_SHELL32 0000000140004d88     shell32:SHELL32.dll
+ 0002:00000d9c       __IMPORT_DESCRIPTOR_MSVCR120 0000000140004d9c     MSVCRT:MSVCR120.dll
+ 0002:00000db0       __NULL_IMPORT_DESCRIPTOR   0000000140004db0     kernel32:KERNEL32.dll
  0003:00000000       __security_cookie          0000000140006000     MSVCRT:gs_cookie.obj
  0003:00000008       __security_cookie_complement 0000000140006008     MSVCRT:gs_cookie.obj
  0003:00000010       __defaultmatherr           0000000140006010     MSVCRT:merr.obj
@@ -304,7 +305,7 @@
  0003:000007e0       __onexitbegin              00000001400067e0     <common>
  0003:000007e8       __dyn_tls_init_callback    00000001400067e8     <common>
 
- entry point at        0001:000019b4
+ entry point at        0001:00001a04
 
  Static symbols
 
@@ -354,6 +355,7 @@
  0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
  0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
  0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
+ 0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
  0000:fffd4000       .debug$S                   0000000140000000     MSVCRT:MSVCR120.dll
  0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
  0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
@@ -382,6 +384,7 @@
  0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
  0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
  0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
+ 0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
  0000:fffd4000       .debug$S                   0000000140000000     kernel32:KERNEL32.dll
  0000:fffd4000       .debug$S                   0000000140000000     kernel32:KERNEL32.dll
  0000:fffd4000       .debug$S                   0000000140000000     kernel32:KERNEL32.dll
@@ -404,91 +407,90 @@
  0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
  0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
  0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
- 0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
- 0000:fffd4000       .debug$S                   0000000140000000     user32:USER32.dll
- 0001:000015e0       $$000000                   00000001400025e0     MSVCRT:amdsecgs.obj
- 0001:00001684       pre_c_init                 0000000140002684 f   MSVCRT:wcrtexew.obj
- 0001:00001754       pre_cpp_init               0000000140002754 f   MSVCRT:wcrtexew.obj
- 0001:000017b8       __tmainCRTStartup          00000001400027b8 f   MSVCRT:wcrtexew.obj
- 0001:00001fe0       __tmainCRTStartup$filt$0   0000000140002fe0 f   MSVCRT:wcrtexew.obj
- 0001:00001ffe       ?fin$0@?0???_M@YAXPEAX_KHP6AX0@Z@Z@4HA 0000000140002ffe f   MSVCRT:ehvecdtr.obj
- 0001:0000202a       ?filt$0@?0??__ArrayUnwind@@YAXPEAX_KHP6AX0@Z@Z@4HA 000000014000302a f   MSVCRT:ehvecdtr.obj
- 0001:00002070       _IsNonwritableInCurrentImage$filt$0 0000000140003070 f   MSVCRT:pesect.obj
- 0001:00002090       _onexit$fin$0              0000000140003090 f   MSVCRT:atonexit.obj
+ 0001:00001630       $$000000                   0000000140002630     MSVCRT:amdsecgs.obj
+ 0001:000016d4       pre_c_init                 00000001400026d4 f   MSVCRT:wcrtexew.obj
+ 0001:000017a4       pre_cpp_init               00000001400027a4 f   MSVCRT:wcrtexew.obj
+ 0001:00001808       __tmainCRTStartup          0000000140002808 f   MSVCRT:wcrtexew.obj
+ 0001:00002030       __tmainCRTStartup$filt$0   0000000140003030 f   MSVCRT:wcrtexew.obj
+ 0001:0000204e       ?fin$0@?0???_M@YAXPEAX_KHP6AX0@Z@Z@4HA 000000014000304e f   MSVCRT:ehvecdtr.obj
+ 0001:0000207a       ?filt$0@?0??__ArrayUnwind@@YAXPEAX_KHP6AX0@Z@Z@4HA 000000014000307a f   MSVCRT:ehvecdtr.obj
+ 0001:000020c0       _IsNonwritableInCurrentImage$filt$0 00000001400030c0 f   MSVCRT:pesect.obj
+ 0001:000020e0       _onexit$fin$0              00000001400030e0 f   MSVCRT:atonexit.obj
  0002:00000338       pcppinit                   0000000140004338     MSVCRT:wcrtexew.obj
  0002:00000350       pcinit                     0000000140004350     MSVCRT:wcrtexew.obj
  0002:00000358       pinit                      0000000140004358     MSVCRT:atonexit.obj
  0002:00000360       pinit                      0000000140004360     MSVCRT:wcrtexew.obj
  0002:000003b8       GS_ExceptionPointers       00000001400043b8     MSVCRT:gs_report.obj
- 0002:000003d0       $SG4294967289              00000001400043d0     * CIL library *:* CIL module *
- 0002:000003e2       $SG4294966833              00000001400043e2     * CIL library *:* CIL module *
- 0002:000003e8       $SG4294967124              00000001400043e8     * CIL library *:* CIL module *
- 0002:000003fc       $SG4294966832              00000001400043fc     * CIL library *:* CIL module *
- 0002:00000400       $SG4294967123              0000000140004400     * CIL library *:* CIL module *
- 0002:00000418       $SG4294967122              0000000140004418     * CIL library *:* CIL module *
- 0002:00000430       $SG4294967121              0000000140004430     * CIL library *:* CIL module *
- 0002:00000448       $SG4294966984              0000000140004448     * CIL library *:* CIL module *
- 0002:00000460       $SG4294966912              0000000140004460     * CIL library *:* CIL module *
- 0002:000004c0       $SG4294966911              00000001400044c0     * CIL library *:* CIL module *
- 0002:000004d8       $SG4294966910              00000001400044d8     * CIL library *:* CIL module *
- 0002:000004f0       $SG4294966909              00000001400044f0     * CIL library *:* CIL module *
- 0002:00000508       $SG4294965642              0000000140004508     * CIL library *:* CIL module *
- 0002:00000528       $SG4294965641              0000000140004528     * CIL library *:* CIL module *
- 0002:00000b00       $unwind$?ShutDown@CClipboardHistory@@UEAAXP6AXEE@Z@Z 0000000140004b00     * CIL library *:* CIL module *
- 0002:00000b00       $unwind$?PasteHistoryPoint@CClipboardHistory@@AEAAXE@Z 0000000140004b00     * CIL library *:* CIL module *
- 0002:00000b00       $unwind$?Initialize@CClipboardHistory@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140004b00     * CIL library *:* CIL module *
- 0002:00000b00       $unwind$?ShutDown@CShellExecutor@@UEAAXP6AXEE@Z@Z 0000000140004b00     * CIL library *:* CIL module *
- 0002:00000b14       $unwind$?HandleHotkey@CClipboardHistory@@UEAAXEK@Z 0000000140004b14     * CIL library *:* CIL module *
- 0002:00000b38       $unwind$?NotifyDrawClipboard@CClipboardHistory@@QEAAXI_K_J@Z 0000000140004b38     * CIL library *:* CIL module *
- 0002:00000b38       $unwind$?LowLevelHookProc@@YA_JH_K_J@Z 0000000140004b38     * CIL library *:* CIL module *
- 0002:00000b50       $unwind$?PushHistoryPoint@CClipboardHistory@@AEAAXPEA_W_K@Z 0000000140004b50     * CIL library *:* CIL module *
- 0002:00000b68       $unwind$?StringCchPrintfW@@YAJPEA_W_KPEB_WZZ 0000000140004b68     * CIL library *:* CIL module *
- 0002:00000b78       $unwind$?StringCchCopyW@@YAJPEA_W_KPEB_W@Z 0000000140004b78     * CIL library *:* CIL module *
- 0002:00000b80       $unwind$?Initialize@CDummyTextGenerator@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140004b80     * CIL library *:* CIL module *
- 0002:00000b80       $unwind$?NotifyKeyUp@CLayoutSwitcher@@UEAAHK@Z 0000000140004b80     * CIL library *:* CIL module *
- 0002:00000b80       $unwind$?Initialize@CZOrderChanger@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140004b80     * CIL library *:* CIL module *
- 0002:00000b80       $unwind$_RTC_Terminate     0000000140004b80     * CIL library *:* CIL module *
- 0002:00000b80       $unwind$_RTC_Initialize    0000000140004b80     * CIL library *:* CIL module *
- 0002:00000b8c       $unwind$?HandleHotkey@CDummyTextGenerator@@UEAAXEK@Z 0000000140004b8c     * CIL library *:* CIL module *
- 0002:00000b9c       $unwind$?Initialize@CShellExecutor@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140004b9c     * CIL library *:* CIL module *
- 0002:00000bb0       $unwind$?HandleHotkey@CShellExecutor@@UEAAXEK@Z 0000000140004bb0     * CIL library *:* CIL module *
- 0002:00000bc0       $unwind$?RegisterHotkey@CShellExecutor@@AEAAEPEAUHKEY__@@PEA_WP6AEEII@Z@Z 0000000140004bc0     * CIL library *:* CIL module *
- 0002:00000bd4       $unwind$wWinMain           0000000140004bd4     * CIL library *:* CIL module *
- 0002:00000bf4       $unwind$?RegisterHandlerHotkey@@YAEEII@Z 0000000140004bf4     * CIL library *:* CIL module *
- 0002:00000bf4       $unwind$__CxxSetUnhandledExceptionFilter 0000000140004bf4     * CIL library *:* CIL module *
- 0002:00000bf4       $unwind$wWinMainCRTStartup 0000000140004bf4     * CIL library *:* CIL module *
- 0002:00000bf4       $unwind$__GSHandlerCheck   0000000140004bf4     * CIL library *:* CIL module *
- 0002:00000bf4       $unwind$atexit             0000000140004bf4     * CIL library *:* CIL module *
- 0002:00000bf4       $unwind$?WindowProc@@YA_JPEAUHWND__@@I_K_J@Z 0000000140004bf4     * CIL library *:* CIL module *
- 0002:00000bf4       $unwind$pre_c_init         0000000140004bf4     * CIL library *:* CIL module *
- 0002:00000bf4       $unwind$?__CxxUnhandledExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z 0000000140004bf4     * CIL library *:* CIL module *
- 0002:00000bfc       $unwind$__raise_securityfailure 0000000140004bfc     * CIL library *:* CIL module *
- 0002:00000bfc       $unwind$?UnregisterHandlerHotkey@@YAXEE@Z 0000000140004bfc     * CIL library *:* CIL module *
- 0002:00000bfc       $unwind$__GSHandlerCheckCommon 0000000140004bfc     * CIL library *:* CIL module *
- 0002:00000bfc       $unwind$__atonexitinit     0000000140004bfc     * CIL library *:* CIL module *
- 0002:00000c04       $unwind$?ShowCustomError@@YAXII@Z 0000000140004c04     * CIL library *:* CIL module *
- 0002:00000c20       $unwind$?ShowWin32Error@@YAXKII@Z 0000000140004c20     * CIL library *:* CIL module *
- 0002:00000c28       $unwind$?HandleHotkey@CZOrderChanger@@UEAAXEK@Z 0000000140004c28     * CIL library *:* CIL module *
- 0002:00000c38       $xdatasym                  0000000140004c38     MSVCRT:amdsecgs.obj
- 0002:00000c3c       $unwind$??_Etype_info@@UEAAPEAXI@Z 0000000140004c3c     MSVCRT:ti_inst.obj
- 0002:00000c4c       $unwind$pre_cpp_init       0000000140004c4c     MSVCRT:wcrtexew.obj
- 0002:00000c54       $unwind$__tmainCRTStartup  0000000140004c54     MSVCRT:wcrtexew.obj
- 0002:00000c84       $unwind$__report_gsfailure 0000000140004c84     MSVCRT:gs_report.obj
- 0002:00000c8c       $unwind$??_M@YAXPEAX_KHP6AX0@Z@Z 0000000140004c8c     MSVCRT:ehvecdtr.obj
- 0002:00000cb4       $unwind$?filt$0@?0??__ArrayUnwind@@YAXPEAX_KHP6AX0@Z@Z@4HA 0000000140004cb4     MSVCRT:ehvecdtr.obj
- 0002:00000cb4       $unwind$_IsNonwritableInCurrentImage$filt$0 0000000140004cb4     MSVCRT:ehvecdtr.obj
- 0002:00000cb4       $unwind$?fin$0@?0???_M@YAXPEAX_KHP6AX0@Z@Z@4HA 0000000140004cb4     MSVCRT:ehvecdtr.obj
- 0002:00000cb4       $unwind$__tmainCRTStartup$filt$0 0000000140004cb4     MSVCRT:ehvecdtr.obj
- 0002:00000cb4       $unwind$_onexit$fin$0      0000000140004cb4     MSVCRT:ehvecdtr.obj
- 0002:00000cbc       $unwind$?__ArrayUnwind@@YAXPEAX_KHP6AX0@Z@Z 0000000140004cbc     MSVCRT:ehvecdtr.obj
- 0002:00000ce4       $unwind$_IsNonwritableInCurrentImage 0000000140004ce4     MSVCRT:pesect.obj
- 0002:00000d08       $unwind$__security_init_cookie 0000000140004d08     MSVCRT:gs_support.obj
- 0002:00000d14       $unwind$_onexit            0000000140004d14     MSVCRT:atonexit.obj
- 0002:00001192       .idata$6                   0000000140005192     kernel32:KERNEL32.dll
- 0002:00001486       .idata$6                   0000000140005486     user32:USER32.dll
- 0002:000014e2       .idata$6                   00000001400054e2     advapi32:ADVAPI32.dll
- 0002:00001500       .idata$6                   0000000140005500     shell32:SHELL32.dll
- 0002:0000153c       .idata$6                   000000014000553c     MSVCRT:MSVCR120.dll
+ 0002:000003d0       $SG4294967289              00000001400043d0     ClipboardHistory.obj
+ 0002:000003e2       $SG4294966834              00000001400043e2     stdafx.obj
+ 0002:000003e8       $SG4294967124              00000001400043e8     DummyTextGenerator.obj
+ 0002:000003fc       $SG4294966833              00000001400043fc     stdafx.obj
+ 0002:00000400       $SG4294967123              0000000140004400     DummyTextGenerator.obj
+ 0002:00000418       $SG4294967122              0000000140004418     DummyTextGenerator.obj
+ 0002:00000430       $SG4294967121              0000000140004430     DummyTextGenerator.obj
+ 0002:00000448       $SG4294966986              0000000140004448     ShellExecutor.obj
+ 0002:00000460       $SG4294966914              0000000140004460     ShellExtender.obj
+ 0002:000004c0       $SG4294966913              00000001400044c0     ShellExtender.obj
+ 0002:000004d8       $SG4294966912              00000001400044d8     ShellExtender.obj
+ 0002:000004f0       $SG4294966911              00000001400044f0     ShellExtender.obj
+ 0002:00000508       $SG4294965642              0000000140004508     utils.obj
+ 0002:00000528       $SG4294965641              0000000140004528     utils.obj
+ 0002:00000b00       $unwind$?ShutDown@CShellExecutor@@UEAAXP6AXEE@Z@Z 0000000140004b00     ShellExecutor.obj
+ 0002:00000b00       $unwind$?Initialize@CClipboardHistory@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140004b00     ClipboardHistory.obj
+ 0002:00000b00       $unwind$?PasteHistoryPoint@CClipboardHistory@@AEAAXE@Z 0000000140004b00     ClipboardHistory.obj
+ 0002:00000b00       $unwind$?ShutDown@CClipboardHistory@@UEAAXP6AXEE@Z@Z 0000000140004b00     ClipboardHistory.obj
+ 0002:00000b14       $unwind$?HandleHotkey@CClipboardHistory@@UEAAXEK@Z 0000000140004b14     ClipboardHistory.obj
+ 0002:00000b38       $unwind$?NotifyDrawClipboard@CClipboardHistory@@QEAAXI_K_J@Z 0000000140004b38     ClipboardHistory.obj
+ 0002:00000b38       $unwind$?LowLevelHookProc@@YA_JH_K_J@Z 0000000140004b38     ShellExtender.obj
+ 0002:00000b50       $unwind$?PushHistoryPoint@CClipboardHistory@@AEAAXPEA_W_K@Z 0000000140004b50     ClipboardHistory.obj
+ 0002:00000b68       $unwind$?StringCchPrintfW@@YAJPEA_W_KPEB_WZZ 0000000140004b68     ClipboardHistory.obj
+ 0002:00000b78       $unwind$?StringCchCopyW@@YAJPEA_W_KPEB_W@Z 0000000140004b78     ClipboardHistory.obj
+ 0002:00000b80       $unwind$?Initialize@CDummyTextGenerator@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140004b80     DummyTextGenerator.obj
+ 0002:00000b80       $unwind$_RTC_Initialize    0000000140004b80     MSVCRT:initsect.obj
+ 0002:00000b80       $unwind$?Initialize@CZOrderChanger@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140004b80     ZOrderChanger.obj
+ 0002:00000b80       $unwind$_RTC_Terminate     0000000140004b80     MSVCRT:initsect.obj
+ 0002:00000b8c       $unwind$?HandleHotkey@CDummyTextGenerator@@UEAAXEK@Z 0000000140004b8c     DummyTextGenerator.obj
+ 0002:00000b9c       $unwind$__raise_securityfailure 0000000140004b9c     MSVCRT:gs_report.obj
+ 0002:00000b9c       $unwind$__GSHandlerCheckCommon 0000000140004b9c     MSVCRT:gshandler.obj
+ 0002:00000b9c       $unwind$__atonexitinit     0000000140004b9c     MSVCRT:atonexit.obj
+ 0002:00000b9c       $unwind$?UnregisterHandlerHotkey@@YAXEE@Z 0000000140004b9c     ShellExtender.obj
+ 0002:00000b9c       $unwind$?NotifyKeyUp@CLayoutSwitcher@@UEAAHK@Z 0000000140004b9c     LayoutSwitcher.obj
+ 0002:00000ba4       $unwind$?SetLayout@CLayoutSwitcher@@AEAAXK@Z 0000000140004ba4     LayoutSwitcher.obj
+ 0002:00000bbc       $unwind$?Initialize@CShellExecutor@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140004bbc     ShellExecutor.obj
+ 0002:00000bd0       $unwind$?HandleHotkey@CShellExecutor@@UEAAXEK@Z 0000000140004bd0     ShellExecutor.obj
+ 0002:00000be0       $unwind$?RegisterHotkey@CShellExecutor@@AEAAEPEAUHKEY__@@PEA_WP6AEEII@Z@Z 0000000140004be0     ShellExecutor.obj
+ 0002:00000bf4       $unwind$wWinMain           0000000140004bf4     ShellExtender.obj
+ 0002:00000c14       $unwind$atexit             0000000140004c14     MSVCRT:atonexit.obj
+ 0002:00000c14       $unwind$?WindowProc@@YA_JPEAUHWND__@@I_K_J@Z 0000000140004c14     ShellExtender.obj
+ 0002:00000c14       $unwind$?RegisterHandlerHotkey@@YAEEII@Z 0000000140004c14     ShellExtender.obj
+ 0002:00000c14       $unwind$wWinMainCRTStartup 0000000140004c14     MSVCRT:wcrtexew.obj
+ 0002:00000c14       $unwind$?__CxxUnhandledExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z 0000000140004c14     MSVCRT:unhandld.obj
+ 0002:00000c14       $unwind$__GSHandlerCheck   0000000140004c14     MSVCRT:gshandler.obj
+ 0002:00000c14       $unwind$__CxxSetUnhandledExceptionFilter 0000000140004c14     MSVCRT:unhandld.obj
+ 0002:00000c14       $unwind$pre_c_init         0000000140004c14     MSVCRT:wcrtexew.obj
+ 0002:00000c1c       $unwind$?ShowCustomError@@YAXII@Z 0000000140004c1c     utils.obj
+ 0002:00000c38       $unwind$?ShowWin32Error@@YAXKII@Z 0000000140004c38     utils.obj
+ 0002:00000c40       $unwind$?HandleHotkey@CZOrderChanger@@UEAAXEK@Z 0000000140004c40     ZOrderChanger.obj
+ 0002:00000c50       $xdatasym                  0000000140004c50     MSVCRT:amdsecgs.obj
+ 0002:00000c54       $unwind$??_Etype_info@@UEAAPEAXI@Z 0000000140004c54     MSVCRT:ti_inst.obj
+ 0002:00000c64       $unwind$pre_cpp_init       0000000140004c64     MSVCRT:wcrtexew.obj
+ 0002:00000c6c       $unwind$__tmainCRTStartup  0000000140004c6c     MSVCRT:wcrtexew.obj
+ 0002:00000c9c       $unwind$__report_gsfailure 0000000140004c9c     MSVCRT:gs_report.obj
+ 0002:00000ca4       $unwind$??_M@YAXPEAX_KHP6AX0@Z@Z 0000000140004ca4     MSVCRT:ehvecdtr.obj
+ 0002:00000ccc       $unwind$_onexit$fin$0      0000000140004ccc     MSVCRT:ehvecdtr.obj
+ 0002:00000ccc       $unwind$_IsNonwritableInCurrentImage$filt$0 0000000140004ccc     MSVCRT:ehvecdtr.obj
+ 0002:00000ccc       $unwind$?filt$0@?0??__ArrayUnwind@@YAXPEAX_KHP6AX0@Z@Z@4HA 0000000140004ccc     MSVCRT:ehvecdtr.obj
+ 0002:00000ccc       $unwind$?fin$0@?0???_M@YAXPEAX_KHP6AX0@Z@Z@4HA 0000000140004ccc     MSVCRT:ehvecdtr.obj
+ 0002:00000ccc       $unwind$__tmainCRTStartup$filt$0 0000000140004ccc     MSVCRT:ehvecdtr.obj
+ 0002:00000cd4       $unwind$?__ArrayUnwind@@YAXPEAX_KHP6AX0@Z@Z 0000000140004cd4     MSVCRT:ehvecdtr.obj
+ 0002:00000cfc       $unwind$_IsNonwritableInCurrentImage 0000000140004cfc     MSVCRT:pesect.obj
+ 0002:00000d20       $unwind$__security_init_cookie 0000000140004d20     MSVCRT:gs_support.obj
+ 0002:00000d2c       $unwind$_onexit            0000000140004d2c     MSVCRT:atonexit.obj
+ 0002:000011aa       .idata$6                   00000001400051aa     kernel32:KERNEL32.dll
+ 0002:0000149e       .idata$6                   000000014000549e     user32:USER32.dll
+ 0002:000014fa       .idata$6                   00000001400054fa     advapi32:ADVAPI32.dll
+ 0002:00001518       .idata$6                   0000000140005518     shell32:SHELL32.dll
+ 0002:00001554       .idata$6                   0000000140005554     MSVCRT:MSVCR120.dll
  0003:000001c0       has_cctor                  00000001400061c0     MSVCRT:wcrtexew.obj
  0003:000001c4       mainret                    00000001400061c4     MSVCRT:wcrtexew.obj
  0003:000001c8       managedapp                 00000001400061c8     MSVCRT:wcrtexew.obj
@@ -500,56 +502,57 @@
  0003:000001f0       GS_ExceptionRecord         00000001400061f0     MSVCRT:gs_report.obj
  0003:00000290       GS_ContextRecord           0000000140006290     MSVCRT:gs_report.obj
  0003:00000760       DebuggerWasPresent         0000000140006760     MSVCRT:gs_report.obj
- 0003:00000774       ?bNextHotkeyID@?1??RegisterHandlerHotkey@@YAEEII@Z@4EA 0000000140006774     * CIL library *:* CIL module *
- 0004:00000000       $pdata$?Initialize@CClipboardHistory@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140007000     * CIL library *:* CIL module *
- 0004:0000000c       $pdata$?HandleHotkey@CClipboardHistory@@UEAAXEK@Z 000000014000700c     * CIL library *:* CIL module *
- 0004:00000018       $pdata$?ShutDown@CClipboardHistory@@UEAAXP6AXEE@Z@Z 0000000140007018     * CIL library *:* CIL module *
- 0004:00000024       $pdata$?NotifyDrawClipboard@CClipboardHistory@@QEAAXI_K_J@Z 0000000140007024     * CIL library *:* CIL module *
- 0004:00000030       $pdata$?PushHistoryPoint@CClipboardHistory@@AEAAXPEA_W_K@Z 0000000140007030     * CIL library *:* CIL module *
- 0004:0000003c       $pdata$?PasteHistoryPoint@CClipboardHistory@@AEAAXE@Z 000000014000703c     * CIL library *:* CIL module *
- 0004:00000048       $pdata$?StringCchPrintfW@@YAJPEA_W_KPEB_WZZ 0000000140007048     * CIL library *:* CIL module *
- 0004:00000054       $pdata$?StringCchCopyW@@YAJPEA_W_KPEB_W@Z 0000000140007054     * CIL library *:* CIL module *
- 0004:00000060       $pdata$?Initialize@CDummyTextGenerator@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140007060     * CIL library *:* CIL module *
- 0004:0000006c       $pdata$?HandleHotkey@CDummyTextGenerator@@UEAAXEK@Z 000000014000706c     * CIL library *:* CIL module *
- 0004:00000078       $pdata$?NotifyKeyUp@CLayoutSwitcher@@UEAAHK@Z 0000000140007078     * CIL library *:* CIL module *
- 0004:00000084       $pdata$?Initialize@CShellExecutor@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140007084     * CIL library *:* CIL module *
- 0004:00000090       $pdata$?HandleHotkey@CShellExecutor@@UEAAXEK@Z 0000000140007090     * CIL library *:* CIL module *
- 0004:0000009c       $pdata$?ShutDown@CShellExecutor@@UEAAXP6AXEE@Z@Z 000000014000709c     * CIL library *:* CIL module *
- 0004:000000a8       $pdata$?RegisterHotkey@CShellExecutor@@AEAAEPEAUHKEY__@@PEA_WP6AEEII@Z@Z 00000001400070a8     * CIL library *:* CIL module *
- 0004:000000b4       $pdata$wWinMain            00000001400070b4     * CIL library *:* CIL module *
- 0004:000000c0       $pdata$?WindowProc@@YA_JPEAUHWND__@@I_K_J@Z 00000001400070c0     * CIL library *:* CIL module *
- 0004:000000cc       $pdata$?RegisterHandlerHotkey@@YAEEII@Z 00000001400070cc     * CIL library *:* CIL module *
- 0004:000000d8       $pdata$?UnregisterHandlerHotkey@@YAXEE@Z 00000001400070d8     * CIL library *:* CIL module *
- 0004:000000e4       $pdata$?LowLevelHookProc@@YA_JH_K_J@Z 00000001400070e4     * CIL library *:* CIL module *
- 0004:000000f0       $pdata$?ShowCustomError@@YAXII@Z 00000001400070f0     * CIL library *:* CIL module *
- 0004:000000fc       $pdata$?ShowWin32Error@@YAXKII@Z 00000001400070fc     * CIL library *:* CIL module *
- 0004:00000108       $pdata$?Initialize@CZOrderChanger@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140007108     * CIL library *:* CIL module *
- 0004:00000114       $pdata$?HandleHotkey@CZOrderChanger@@UEAAXEK@Z 0000000140007114     * CIL library *:* CIL module *
- 0004:0000012c       $pdata$??_Etype_info@@UEAAPEAXI@Z 000000014000712c     MSVCRT:ti_inst.obj
- 0004:00000138       $pdata$pre_c_init          0000000140007138     MSVCRT:wcrtexew.obj
- 0004:00000144       $pdata$pre_cpp_init        0000000140007144     MSVCRT:wcrtexew.obj
- 0004:00000150       $pdata$__tmainCRTStartup   0000000140007150     MSVCRT:wcrtexew.obj
- 0004:0000015c       $pdata$wWinMainCRTStartup  000000014000715c     MSVCRT:wcrtexew.obj
- 0004:00000168       $pdata$__raise_securityfailure 0000000140007168     MSVCRT:gs_report.obj
- 0004:00000174       $pdata$__report_gsfailure  0000000140007174     MSVCRT:gs_report.obj
- 0004:00000180       $pdata$??_M@YAXPEAX_KHP6AX0@Z@Z 0000000140007180     MSVCRT:ehvecdtr.obj
- 0004:0000018c       $pdata$?__ArrayUnwind@@YAXPEAX_KHP6AX0@Z@Z 000000014000718c     MSVCRT:ehvecdtr.obj
- 0004:00000198       $pdata$?__CxxUnhandledExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z 0000000140007198     MSVCRT:unhandld.obj
- 0004:000001a4       $pdata$__CxxSetUnhandledExceptionFilter 00000001400071a4     MSVCRT:unhandld.obj
- 0004:000001b0       $pdata$_IsNonwritableInCurrentImage 00000001400071b0     MSVCRT:pesect.obj
- 0004:000001bc       $pdata$__security_init_cookie 00000001400071bc     MSVCRT:gs_support.obj
- 0004:000001c8       $pdata$__atonexitinit      00000001400071c8     MSVCRT:atonexit.obj
- 0004:000001d4       $pdata$_onexit             00000001400071d4     MSVCRT:atonexit.obj
- 0004:000001e0       $pdata$atexit              00000001400071e0     MSVCRT:atonexit.obj
- 0004:000001ec       $pdata$_RTC_Initialize     00000001400071ec     MSVCRT:initsect.obj
- 0004:000001f8       $pdata$_RTC_Terminate      00000001400071f8     MSVCRT:initsect.obj
- 0004:00000204       $pdata$__GSHandlerCheck    0000000140007204     MSVCRT:gshandler.obj
- 0004:00000210       $pdata$__GSHandlerCheckCommon 0000000140007210     MSVCRT:gshandler.obj
- 0004:0000021c       $pdata$__tmainCRTStartup$filt$0 000000014000721c     MSVCRT:wcrtexew.obj
- 0004:00000228       $pdata$?fin$0@?0???_M@YAXPEAX_KHP6AX0@Z@Z@4HA 0000000140007228     MSVCRT:ehvecdtr.obj
- 0004:00000234       $pdata$?filt$0@?0??__ArrayUnwind@@YAXPEAX_KHP6AX0@Z@Z@4HA 0000000140007234     MSVCRT:ehvecdtr.obj
- 0004:00000240       $pdata$_IsNonwritableInCurrentImage$filt$0 0000000140007240     MSVCRT:pesect.obj
- 0004:0000024c       $pdata$_onexit$fin$0       000000014000724c     MSVCRT:atonexit.obj
+ 0003:00000774       ?bNextHotkeyID@?1??RegisterHandlerHotkey@@YAEEII@Z@4EA 0000000140006774     ShellExtender.obj
+ 0004:00000000       $pdata$?Initialize@CClipboardHistory@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140007000     ClipboardHistory.obj
+ 0004:0000000c       $pdata$?HandleHotkey@CClipboardHistory@@UEAAXEK@Z 000000014000700c     ClipboardHistory.obj
+ 0004:00000018       $pdata$?ShutDown@CClipboardHistory@@UEAAXP6AXEE@Z@Z 0000000140007018     ClipboardHistory.obj
+ 0004:00000024       $pdata$?NotifyDrawClipboard@CClipboardHistory@@QEAAXI_K_J@Z 0000000140007024     ClipboardHistory.obj
+ 0004:00000030       $pdata$?PushHistoryPoint@CClipboardHistory@@AEAAXPEA_W_K@Z 0000000140007030     ClipboardHistory.obj
+ 0004:0000003c       $pdata$?PasteHistoryPoint@CClipboardHistory@@AEAAXE@Z 000000014000703c     ClipboardHistory.obj
+ 0004:00000048       $pdata$?StringCchPrintfW@@YAJPEA_W_KPEB_WZZ 0000000140007048     ClipboardHistory.obj
+ 0004:00000054       $pdata$?StringCchCopyW@@YAJPEA_W_KPEB_W@Z 0000000140007054     ClipboardHistory.obj
+ 0004:00000060       $pdata$?Initialize@CDummyTextGenerator@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140007060     DummyTextGenerator.obj
+ 0004:0000006c       $pdata$?HandleHotkey@CDummyTextGenerator@@UEAAXEK@Z 000000014000706c     DummyTextGenerator.obj
+ 0004:00000078       $pdata$?NotifyKeyUp@CLayoutSwitcher@@UEAAHK@Z 0000000140007078     LayoutSwitcher.obj
+ 0004:00000084       $pdata$?SetLayout@CLayoutSwitcher@@AEAAXK@Z 0000000140007084     LayoutSwitcher.obj
+ 0004:00000090       $pdata$?Initialize@CShellExecutor@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140007090     ShellExecutor.obj
+ 0004:0000009c       $pdata$?HandleHotkey@CShellExecutor@@UEAAXEK@Z 000000014000709c     ShellExecutor.obj
+ 0004:000000a8       $pdata$?ShutDown@CShellExecutor@@UEAAXP6AXEE@Z@Z 00000001400070a8     ShellExecutor.obj
+ 0004:000000b4       $pdata$?RegisterHotkey@CShellExecutor@@AEAAEPEAUHKEY__@@PEA_WP6AEEII@Z@Z 00000001400070b4     ShellExecutor.obj
+ 0004:000000c0       $pdata$wWinMain            00000001400070c0     ShellExtender.obj
+ 0004:000000cc       $pdata$?WindowProc@@YA_JPEAUHWND__@@I_K_J@Z 00000001400070cc     ShellExtender.obj
+ 0004:000000d8       $pdata$?RegisterHandlerHotkey@@YAEEII@Z 00000001400070d8     ShellExtender.obj
+ 0004:000000e4       $pdata$?UnregisterHandlerHotkey@@YAXEE@Z 00000001400070e4     ShellExtender.obj
+ 0004:000000f0       $pdata$?LowLevelHookProc@@YA_JH_K_J@Z 00000001400070f0     ShellExtender.obj
+ 0004:000000fc       $pdata$?ShowCustomError@@YAXII@Z 00000001400070fc     utils.obj
+ 0004:00000108       $pdata$?ShowWin32Error@@YAXKII@Z 0000000140007108     utils.obj
+ 0004:00000114       $pdata$?Initialize@CZOrderChanger@@UEAAHEPEAUHWND__@@PEAUHINSTANCE__@@P6AEEII@Z@Z 0000000140007114     ZOrderChanger.obj
+ 0004:00000120       $pdata$?HandleHotkey@CZOrderChanger@@UEAAXEK@Z 0000000140007120     ZOrderChanger.obj
+ 0004:00000138       $pdata$??_Etype_info@@UEAAPEAXI@Z 0000000140007138     MSVCRT:ti_inst.obj
+ 0004:00000144       $pdata$pre_c_init          0000000140007144     MSVCRT:wcrtexew.obj
+ 0004:00000150       $pdata$pre_cpp_init        0000000140007150     MSVCRT:wcrtexew.obj
+ 0004:0000015c       $pdata$__tmainCRTStartup   000000014000715c     MSVCRT:wcrtexew.obj
+ 0004:00000168       $pdata$wWinMainCRTStartup  0000000140007168     MSVCRT:wcrtexew.obj
+ 0004:00000174       $pdata$__raise_securityfailure 0000000140007174     MSVCRT:gs_report.obj
+ 0004:00000180       $pdata$__report_gsfailure  0000000140007180     MSVCRT:gs_report.obj
+ 0004:0000018c       $pdata$??_M@YAXPEAX_KHP6AX0@Z@Z 000000014000718c     MSVCRT:ehvecdtr.obj
+ 0004:00000198       $pdata$?__ArrayUnwind@@YAXPEAX_KHP6AX0@Z@Z 0000000140007198     MSVCRT:ehvecdtr.obj
+ 0004:000001a4       $pdata$?__CxxUnhandledExceptionFilter@@YAJPEAU_EXCEPTION_POINTERS@@@Z 00000001400071a4     MSVCRT:unhandld.obj
+ 0004:000001b0       $pdata$__CxxSetUnhandledExceptionFilter 00000001400071b0     MSVCRT:unhandld.obj
+ 0004:000001bc       $pdata$_IsNonwritableInCurrentImage 00000001400071bc     MSVCRT:pesect.obj
+ 0004:000001c8       $pdata$__security_init_cookie 00000001400071c8     MSVCRT:gs_support.obj
+ 0004:000001d4       $pdata$__atonexitinit      00000001400071d4     MSVCRT:atonexit.obj
+ 0004:000001e0       $pdata$_onexit             00000001400071e0     MSVCRT:atonexit.obj
+ 0004:000001ec       $pdata$atexit              00000001400071ec     MSVCRT:atonexit.obj
+ 0004:000001f8       $pdata$_RTC_Initialize     00000001400071f8     MSVCRT:initsect.obj
+ 0004:00000204       $pdata$_RTC_Terminate      0000000140007204     MSVCRT:initsect.obj
+ 0004:00000210       $pdata$__GSHandlerCheck    0000000140007210     MSVCRT:gshandler.obj
+ 0004:0000021c       $pdata$__GSHandlerCheckCommon 000000014000721c     MSVCRT:gshandler.obj
+ 0004:00000228       $pdata$__tmainCRTStartup$filt$0 0000000140007228     MSVCRT:wcrtexew.obj
+ 0004:00000234       $pdata$?fin$0@?0???_M@YAXPEAX_KHP6AX0@Z@Z@4HA 0000000140007234     MSVCRT:ehvecdtr.obj
+ 0004:00000240       $pdata$?filt$0@?0??__ArrayUnwind@@YAXPEAX_KHP6AX0@Z@Z@4HA 0000000140007240     MSVCRT:ehvecdtr.obj
+ 0004:0000024c       $pdata$_IsNonwritableInCurrentImage$filt$0 000000014000724c     MSVCRT:pesect.obj
+ 0004:00000258       $pdata$_onexit$fin$0       0000000140007258     MSVCRT:atonexit.obj
  0005:000002a0       $R000000                   00000001400082a0     ShellExtender.res
  0005:00000660       $R0003C0                   0000000140008660     ShellExtender.res
  0005:0000c758       $R00C4B8                   0000000140014758     ShellExtender.res
@@ -561,3 +564,8 @@
  0005:00021420       $R021180                   0000000140029420     ShellExtender.res
  0005:00021728       $R021488                   0000000140029728     ShellExtender.res
  0005:000222f8       $R022058                   000000014002a2f8     ShellExtender.res
+
+ Exports
+
+  ordinal    name
+

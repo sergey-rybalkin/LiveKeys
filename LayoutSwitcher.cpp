@@ -8,6 +8,9 @@
 #include "StdAfx.h"
 #include "LayoutSwitcher.h"
 
+#define RUSSIAN_LAYOUT 0x04190419
+#define ENGLISH_LAYOUT 0x04090409
+
 CLayoutSwitcher::CLayoutSwitcher ( )
 {
 }
@@ -45,7 +48,7 @@ VOID CLayoutSwitcher::ShutDown ( FPN_UNREGISTER_HOTKEY fpnUnregisterHotkey )
 // hide event from the system.
 BOOL CLayoutSwitcher::NotifyKeyDown ( DWORD vkCode )
 {
-    m_bShiftPressed = ( VK_RSHIFT == vkCode ) ;
+    m_dwPrevKey = vkCode ;
 
     return FALSE ;
 }
@@ -55,29 +58,47 @@ BOOL CLayoutSwitcher::NotifyKeyDown ( DWORD vkCode )
 // hide event from the system.
 BOOL CLayoutSwitcher::NotifyKeyUp ( DWORD vkCode )
 {
-    if ( m_bShiftPressed && ( VK_RSHIFT == vkCode ) )
-        SwitchLayout ( ) ;
-
-    m_bShiftPressed = false ;
+    if ( ( m_dwPrevKey & vkCode ) == VK_RSHIFT )
+        SetLayout ( ENGLISH_LAYOUT ) ;
+    else if ( ( m_dwPrevKey & vkCode ) == VK_LSHIFT )
+        SetLayout ( RUSSIAN_LAYOUT ) ;
+    
+    m_dwPrevKey = 0 ;
 
     return FALSE ;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // Does all the work - switches layout in the foreground window.
-VOID CLayoutSwitcher::SwitchLayout ( )
+VOID CLayoutSwitcher::SetLayout ( DWORD dwLayout )
 {
     HWND hFocusWnd = GetForegroundWindow ( ) ;
     if ( NULL == hFocusWnd )
         return ;
 
-    PostMessage ( hFocusWnd , WM_INPUTLANGCHANGEREQUEST , INPUTLANGCHANGE_FORWARD , HKL_NEXT ) ;
-
     DWORD dwThreadId = GetWindowThreadProcessId ( hFocusWnd , NULL ) ;
     HKL hCurLayout = GetKeyboardLayout ( dwThreadId ) ;
 
-    if ( 0x04090409 == ( int ) hCurLayout )
-        SendMessage ( hFocusWnd , WM_INPUTLANGCHANGE , 0x204 , 0x04190419 ) ;
-    else
-        SendMessage ( hFocusWnd , WM_INPUTLANGCHANGE , 0 , 0x04090409 ) ;
+    // If the specified layout is already activated then we don't need to do anything.
+    if ( dwLayout == ( DWORD ) hCurLayout )
+        return ;
+
+    // Emulate Win + Space keyboard shortcut that switches languages regardless of the system settings
+    INPUT inputs [ 4 ] = { 0 } ;
+
+    inputs[0].type = INPUT_KEYBOARD;
+    inputs[0].ki.wVk = VK_CONTROL;
+
+    inputs[1].type = INPUT_KEYBOARD;
+    inputs[1].ki.wVk = VK_SHIFT;
+
+    inputs[2].type = INPUT_KEYBOARD;
+    inputs[2].ki.wVk = VK_SHIFT;
+    inputs[2].ki.dwFlags = KEYEVENTF_KEYUP;
+
+    inputs[3].type = INPUT_KEYBOARD;
+    inputs[3].ki.wVk = VK_CONTROL;
+    inputs[3].ki.dwFlags = KEYEVENTF_KEYUP;
+
+    SendInput ( 4 , inputs , sizeof ( INPUT ) ) ;
 }

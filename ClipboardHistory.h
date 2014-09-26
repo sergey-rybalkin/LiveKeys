@@ -13,7 +13,7 @@
 // Globals
 #define MAX_CLIPBOARD_LEN 10000 // Defines maximum clipboard text len that will be handled in bytes
 #define MAX_HISTORY_DEPTH 20    // Defines maximum number of items in history
-#define MAX_MENU_ITEM_LENGTH 20 // Defines maximum popup menu item text length
+#define MAX_MENU_ITEM_LENGTH 30 // Defines maximum popup menu item text length
 
 struct ClipboardHistoryPoint
 {
