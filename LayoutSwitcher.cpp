@@ -48,7 +48,18 @@ VOID CLayoutSwitcher::ShutDown ( FPN_UNREGISTER_HOTKEY fpnUnregisterHotkey )
 // hide event from the system.
 BOOL CLayoutSwitcher::NotifyKeyDown ( DWORD vkCode )
 {
-    m_dwPrevKey = vkCode ;
+    if ( m_dwPrevKey == vkCode )
+        return FALSE ;
+
+    if ( vkCode == VK_RSHIFT || vkCode == VK_LSHIFT )
+    {
+        LASTINPUTINFO info ; 
+        info.cbSize = sizeof ( info ) ;
+        GetLastInputInfo ( &info ) ;
+        m_dwLastInputTimestamp = info.dwTime ;
+
+        m_dwPrevKey = vkCode ;
+    }
 
     return FALSE ;
 }
@@ -72,6 +83,13 @@ BOOL CLayoutSwitcher::NotifyKeyUp ( DWORD vkCode )
 // Does all the work - switches layout in the foreground window.
 VOID CLayoutSwitcher::SetLayout ( DWORD dwLayout )
 {
+    // Check whether hotkey has expired
+    DWORD tickCount = GetTickCount();
+    if ( tickCount - m_dwLastInputTimestamp > 200 )
+        return ;
+
+    OutputDebugString ( L"Pingback from hotkey" ) ;
+
     HWND hFocusWnd = GetForegroundWindow ( ) ;
     if ( NULL == hFocusWnd )
         return ;
