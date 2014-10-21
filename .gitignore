@@ -21,6 +21,7 @@
 *.vspscc
 *_i.c
 *_p.c
+*.map
 [Bb]in
 [Db]ebug
 obj
@@ -35,3 +36,4 @@ PrecompiledWeb
 connectionStrings.config
 *.sass-cache
 ipch
+*.opensdf

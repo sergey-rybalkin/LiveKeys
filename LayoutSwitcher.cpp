@@ -85,10 +85,8 @@ VOID CLayoutSwitcher::SetLayout ( DWORD dwLayout )
 {
     // Check whether hotkey has expired
     DWORD tickCount = GetTickCount();
-    if ( tickCount - m_dwLastInputTimestamp > 200 )
+    if ( tickCount - m_dwLastInputTimestamp > 250 )
         return ;
-
-    OutputDebugString ( L"Pingback from hotkey" ) ;
 
     HWND hFocusWnd = GetForegroundWindow ( ) ;
     if ( NULL == hFocusWnd )
