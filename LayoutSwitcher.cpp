@@ -48,18 +48,10 @@ VOID CLayoutSwitcher::ShutDown ( FPN_UNREGISTER_HOTKEY fpnUnregisterHotkey )
 // hide event from the system.
 BOOL CLayoutSwitcher::NotifyKeyDown ( DWORD vkCode )
 {
-    if ( m_dwPrevKey == vkCode )
-        return FALSE ;
+    m_dwPrevKey = vkCode ;
 
     if ( vkCode == VK_RSHIFT || vkCode == VK_LSHIFT )
-    {
-        LASTINPUTINFO info ; 
-        info.cbSize = sizeof ( info ) ;
-        GetLastInputInfo ( &info ) ;
-        m_dwLastInputTimestamp = info.dwTime ;
-
-        m_dwPrevKey = vkCode ;
-    }
+        m_dwLastInputTimestamp = GetTickCount ( ) ;
 
     return FALSE ;
 }
