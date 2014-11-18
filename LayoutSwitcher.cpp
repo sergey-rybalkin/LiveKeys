@@ -50,9 +50,6 @@ BOOL CLayoutSwitcher::NotifyKeyDown ( DWORD vkCode )
 {
     m_dwPrevKey = vkCode ;
 
-    if ( vkCode == VK_RSHIFT || vkCode == VK_LSHIFT )
-        m_dwLastInputTimestamp = GetTickCount ( ) ;
-
     return FALSE ;
 }
 
@@ -61,9 +58,9 @@ BOOL CLayoutSwitcher::NotifyKeyDown ( DWORD vkCode )
 // hide event from the system.
 BOOL CLayoutSwitcher::NotifyKeyUp ( DWORD vkCode )
 {
-    if ( ( m_dwPrevKey & vkCode ) == VK_RSHIFT )
+    if ( ( m_dwPrevKey & vkCode ) == VK_RCONTROL )
         SetLayout ( ENGLISH_LAYOUT ) ;
-    else if ( ( m_dwPrevKey & vkCode ) == VK_LSHIFT )
+    else if ( ( m_dwPrevKey & vkCode ) == VK_LCONTROL )
         SetLayout ( RUSSIAN_LAYOUT ) ;
     
     m_dwPrevKey = 0 ;
@@ -75,11 +72,6 @@ BOOL CLayoutSwitcher::NotifyKeyUp ( DWORD vkCode )
 // Does all the work - switches layout in the foreground window.
 VOID CLayoutSwitcher::SetLayout ( DWORD dwLayout )
 {
-    // Check whether hotkey has expired
-    DWORD tickCount = GetTickCount();
-    if ( tickCount - m_dwLastInputTimestamp > 250 )
-        return ;
-
     HWND hFocusWnd = GetForegroundWindow ( ) ;
     if ( NULL == hFocusWnd )
         return ;

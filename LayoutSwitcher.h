@@ -40,5 +40,4 @@ private:
 
     VOID SetLayout ( DWORD dwLayout ) ; // switches keyboard layout in the foreground window.
     DWORD m_dwPrevKey ; // contains code of the currently pressed key.
-    DWORD m_dwLastInputTimestamp ; // contains result of the last GetTickCount64 call.
 };
