@@ -59,9 +59,9 @@ BOOL CLayoutSwitcher::NotifyKeyDown ( DWORD vkCode )
 BOOL CLayoutSwitcher::NotifyKeyUp ( DWORD vkCode )
 {
     if ( ( m_dwPrevKey & vkCode ) == VK_RCONTROL )
-        SetLayout ( ENGLISH_LAYOUT ) ;
-    else if ( ( m_dwPrevKey & vkCode ) == VK_LCONTROL )
         SetLayout ( RUSSIAN_LAYOUT ) ;
+    else if ( ( m_dwPrevKey & vkCode ) == VK_LCONTROL )
+        SetLayout ( ENGLISH_LAYOUT ) ;
     
     m_dwPrevKey = 0 ;
 
