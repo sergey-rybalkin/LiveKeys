@@ -38,6 +38,6 @@ public:
 
 private:
 
-    VOID SetLayout ( DWORD dwLayout ) ; // switches keyboard layout in the foreground window.
+    VOID SetLayout ( HKL dwLayout ) ; // switches keyboard layout in the foreground window.
     DWORD m_dwPrevKey ; // contains code of the currently pressed key.
 };

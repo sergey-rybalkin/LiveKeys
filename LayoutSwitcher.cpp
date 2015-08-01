@@ -59,9 +59,9 @@ BOOL CLayoutSwitcher::NotifyKeyDown ( DWORD vkCode )
 BOOL CLayoutSwitcher::NotifyKeyUp ( DWORD vkCode )
 {
     if ( ( m_dwPrevKey & vkCode ) == VK_RCONTROL )
-        SetLayout ( RUSSIAN_LAYOUT ) ;
+        SetLayout ( (HKL) RUSSIAN_LAYOUT ) ;
     else if ( ( m_dwPrevKey & vkCode ) == VK_LCONTROL )
-        SetLayout ( ENGLISH_LAYOUT ) ;
+        SetLayout ( (HKL) ENGLISH_LAYOUT ) ;
     
     m_dwPrevKey = 0 ;
 
@@ -70,7 +70,7 @@ BOOL CLayoutSwitcher::NotifyKeyUp ( DWORD vkCode )
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // Does all the work - switches layout in the foreground window.
-VOID CLayoutSwitcher::SetLayout ( DWORD dwLayout )
+VOID CLayoutSwitcher::SetLayout ( HKL dwLayout )
 {
     HWND hFocusWnd = GetForegroundWindow ( ) ;
     if ( NULL == hFocusWnd )
@@ -80,7 +80,7 @@ VOID CLayoutSwitcher::SetLayout ( DWORD dwLayout )
     HKL hCurLayout = GetKeyboardLayout ( dwThreadId ) ;
 
     // If the specified layout is already activated then we don't need to do anything.
-    if ( dwLayout == ( DWORD ) hCurLayout )
+    if ( dwLayout == hCurLayout )
         return ;
 
     // Emulate Win + Space keyboard shortcut that switches languages regardless of the system settings
