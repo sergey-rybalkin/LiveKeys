@@ -1,7 +1,6 @@
 *.aps
 *.bak
 *.cache
-*.dbmdl
 *.exe
 *.ilk
 *.lib
@@ -23,17 +22,7 @@
 *_p.c
 *.map
 [Bb]in
-[Db]ebug
 obj
-[Rr]elease
-_ReSharper*
-[Tt]est[Rr]esult*
-[Bb]uild[Ll]og.*
-[Pp]ublish.xml
-sql
-"Import Script Logs"
-PrecompiledWeb
-connectionStrings.config
-*.sass-cache
 ipch
-*.opensdf
+*.opendb
+*.db

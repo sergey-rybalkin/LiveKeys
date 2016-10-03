@@ -183,27 +183,45 @@ VOID CClipboardHistory::NotifyDrawClipboard ( UINT uMsg , WPARAM wParam , LPARAM
     if ( GetClipboardOwner ( ) == m_hwndMainWindow )
         return ; // ignore ourselves
 
+    OutputDebugString(L"1");
+
     // Check whether clipboard is available and it's content is text
     if ( IsClipboardFormatAvailable ( CF_UNICODETEXT ) && OpenClipboard ( m_hwndMainWindow ) )
     {
+        OutputDebugString(L"2");
+
         // Retrieve the text from clipboard
         HGLOBAL hClipboard = GetClipboardData ( CF_UNICODETEXT ) ;
-        WCHAR* pszSrc = ( WCHAR* ) GlobalLock ( hClipboard ) ;
 
-        // Check whether it's not too big, if it is - just skip it
-        size_t nSize = 0 ;
-        HRESULT hr = StringCbLength ( pszSrc , MAX_CLIPBOARD_LEN , &nSize ) ;
-        if ( SUCCEEDED ( hr ) )
+        OutputDebugString(L"3");
+
+        if ( hClipboard )
         {
-            if ( MAX_CLIPBOARD_LEN > nSize )
-                PushHistoryPoint ( pszSrc , nSize ) ;
-        }
+            OutputDebugString(L"4");
 
-        GlobalUnlock ( hClipboard ) ;
+            WCHAR* pszSrc = ( WCHAR* ) GlobalLock ( hClipboard ) ;
 
-        if ( !CloseClipboard ( ) )
-        {
-            DbgPrintWin32Error ( GetLastError ( ) , NULL ) ;
+            OutputDebugString(L"5");
+
+            // Check whether it's not too big, if it is - just skip it
+            size_t nSize = 0 ;
+            HRESULT hr = StringCbLength ( pszSrc , MAX_CLIPBOARD_LEN , &nSize ) ;
+            if ( SUCCEEDED ( hr ) )
+            {
+                if ( MAX_CLIPBOARD_LEN > nSize )
+                    PushHistoryPoint ( pszSrc , nSize ) ;
+            }
+
+            GlobalUnlock ( hClipboard ) ;
+
+            OutputDebugString(L"6");
+
+            if ( !CloseClipboard ( ) )
+            {
+                DbgPrintWin32Error ( GetLastError ( ) , NULL ) ;
+            }
+
+            OutputDebugString(L"7");
         }
     }
 
