@@ -72,13 +72,15 @@ BOOL CLayoutSwitcher::NotifyKeyUp ( DWORD vkCode )
 // Does all the work - switches layout in the foreground window.
 VOID CLayoutSwitcher::SetLayout ( HKL dwLayout )
 {
-    HWND hFocusWnd = GetForegroundWindow ( ) ;
-    if ( NULL == hFocusWnd )
+    GUITHREADINFO Gti = { 0 };
+    Gti.cbSize = sizeof(GUITHREADINFO);
+    GetGUIThreadInfo(NULL, &Gti);
+
+    if ( NULL == Gti.hwndFocus)
         return ;
 
-    DWORD dwProcId ;
-    DWORD dwThreadId = GetWindowThreadProcessId ( hFocusWnd , &dwProcId ) ;
-    HKL hCurLayout = GetKeyboardLayout ( dwThreadId ) ;
+    DWORD dwThreadId = GetWindowThreadProcessId(Gti.hwndFocus, 0);
+    HKL hCurLayout = GetKeyboardLayout(dwThreadId);
 
     // If the specified layout is already activated then we don't need to do anything.
     if ( dwLayout == hCurLayout )
