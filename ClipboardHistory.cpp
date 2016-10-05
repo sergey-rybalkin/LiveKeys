@@ -169,7 +169,7 @@ HWND CClipboardHistory::GetNextWindowInChain ( )
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-// Set accessor for m_hwndNextChain
+// Set successor for m_hwndNextChain
 VOID CClipboardHistory::SetNextWindowInChain ( HWND hwndNextChain )
 {
     m_hwndNextChain = hwndNextChain ;

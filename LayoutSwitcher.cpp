@@ -76,7 +76,8 @@ VOID CLayoutSwitcher::SetLayout ( HKL dwLayout )
     if ( NULL == hFocusWnd )
         return ;
 
-    DWORD dwThreadId = GetWindowThreadProcessId ( hFocusWnd , NULL ) ;
+    DWORD dwProcId ;
+    DWORD dwThreadId = GetWindowThreadProcessId ( hFocusWnd , &dwProcId ) ;
     HKL hCurLayout = GetKeyboardLayout ( dwThreadId ) ;
 
     // If the specified layout is already activated then we don't need to do anything.
