@@ -177,30 +177,19 @@ LRESULT CALLBACK WindowProc ( HWND hWnd , UINT uMsg , WPARAM wParam , LPARAM lPa
                 g_pHandlers [ wParam ]->HandleCommand ( lParam ) ;
 
             return 0 ;
-        case WM_CHANGECBCHAIN : 
-            pHistory = ( CClipboardHistory* ) g_pHandlers [ 2 ] ;
-
-            if ( ( HWND ) wParam == pHistory->GetNextWindowInChain ( ) ) 
-                pHistory->SetNextWindowInChain ( ( HWND ) lParam ) ;
-            else if ( pHistory->GetNextWindowInChain ( ) != NULL )
-                SendMessage ( pHistory->GetNextWindowInChain ( ) , uMsg , wParam , lParam ) ; 
-
-            return 0 ;
-
-        case WM_DRAWCLIPBOARD :
+        case WM_CLIPBOARDUPDATE:
             // It appears that SetClipboardViewer function sends WM_DRAWCLIPBOARD message to the
             // window whose handle is being passed to it, but this call is totally useless for us.
             // Also it cannot be passed to the next window in the chain as we don't have it's handle
             // yet. So just ignore this message for the first time.
             if ( NULL == g_hHook ) // Hook is being set up after initialization so that's a good way
-                                   // to check whether this is the frist message
+                                   // to check whether this is the first message
                 return 0 ;
 
-            pHistory = ( CClipboardHistory* ) g_pHandlers [ 2 ] ;
-            pHistory->NotifyDrawClipboard ( uMsg , wParam , lParam ) ;
+            pHistory = (CClipboardHistory*) g_pHandlers[2];
+            pHistory->NotifyClipboardUpdate(uMsg, wParam, lParam);
 
             return 0 ;
-
         default :
             return DefWindowProc ( hWnd , uMsg , wParam , lParam ) ;
     }

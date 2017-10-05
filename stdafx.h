@@ -21,3 +21,4 @@
 // TODO: reference additional headers your program requires here
 #include <strsafe.h>
 #include <shellapi.h>
+#include <TraceLoggingProvider.h>
