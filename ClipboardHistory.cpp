@@ -43,7 +43,7 @@ BOOL CClipboardHistory::Initialize(
         return FALSE;
 
     // Register Win+V combination that will be used to show popup menu with previous clipboard content.
-    m_bShowHistoryHotkeyID = fpnRegisterHotkey(bHandlerID, MOD_CONTROL | MOD_WIN, VkKeyScan(L'v'));
+    m_bShowHistoryHotkeyID = fpnRegisterHotkey(bHandlerID, MOD_WIN | MOD_CONTROL, VkKeyScan(L'v'));
 
     return m_bShowHistoryHotkeyID ? TRUE : FALSE;
 }

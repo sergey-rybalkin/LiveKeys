@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShellExtender", "ShellExtender.vcxproj", "{F792CAC0-BB05-4A59-9B79-4DCAE24C5DAC}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShellExtenderTests", "Tests\ShellExtenderTests.vcxproj", "{78AA7142-B5E4-48E1-9FAD-D1F08C170338}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +15,11 @@ Global
 		{F792CAC0-BB05-4A59-9B79-4DCAE24C5DAC}.Debug|x64.Build.0 = Debug|x64
 		{F792CAC0-BB05-4A59-9B79-4DCAE24C5DAC}.Release|x64.ActiveCfg = Release|x64
 		{F792CAC0-BB05-4A59-9B79-4DCAE24C5DAC}.Release|x64.Build.0 = Release|x64
-		{78AA7142-B5E4-48E1-9FAD-D1F08C170338}.Debug|x64.ActiveCfg = Debug|Win32
-		{78AA7142-B5E4-48E1-9FAD-D1F08C170338}.Debug|x64.Build.0 = Debug|Win32
-		{78AA7142-B5E4-48E1-9FAD-D1F08C170338}.Release|x64.ActiveCfg = Release|x64
-		{78AA7142-B5E4-48E1-9FAD-D1F08C170338}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC7DD0F6-D0E2-4D19-BC3B-3666703EF8BF}
 	EndGlobalSection
 EndGlobal

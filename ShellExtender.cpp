@@ -81,21 +81,25 @@ int APIENTRY _tWinMain ( HINSTANCE hInstance ,
                             0 ) ;
 
     // Initialize array of handlers. Note to app extenders: register your hotkey handlers here.
-    g_pHandlers [ 0 ] = new CLayoutSwitcher   ( ) ;
-    g_pHandlers [ 1 ] = new CShellExecutor    ( ) ;
-    g_pHandlers [ 2 ] = new CClipboardHistory ( ) ;
-    g_pHandlers [ 3 ] = new CDummyTextGenerator ( ) ;
-    g_pHandlers [ 4 ] = new CZOrderChanger ( ) ;
-
-    for ( BYTE index = 0 ; index < NUM_LIVEKEYS_HANDLERS ; index++ )
+    g_pHandlers[0] = new CLayoutSwitcher();
+    g_pHandlers[1] = new CShellExecutor();
+    g_pHandlers[2] = new CClipboardHistory();
+    g_pHandlers[3] = new CDummyTextGenerator();
+    g_pHandlers[4] = new CZOrderChanger();
+    
+    for (BYTE index = 0; index < NUM_LIVEKEYS_HANDLERS; index++)
     {
-        BOOL bInitialized = g_pHandlers [ index ]->Initialize ( 
-            index , g_hWnd , g_hInst , RegisterHandlerHotkey ) ;
-        if ( !bInitialized )
+        BOOL bInitialized = g_pHandlers[index]->Initialize( 
+            index,
+            g_hWnd,
+            g_hInst,
+            RegisterHandlerHotkey);
+        
+        if (!bInitialized)
         {
-            ShowCustomError ( IDS_CAPTION_ERROR , IDS_ERROR_HANDLER_NOT_INITIALIZED ) ;
-            delete g_pHandlers [ index ] ;
-            g_pHandlers [ index ] = NULL ;
+            ShowCustomError(IDS_CAPTION_ERROR, IDS_ERROR_HANDLER_NOT_INITIALIZED);
+            delete g_pHandlers[index];
+            g_pHandlers[index] = NULL;
         }
     }
 
@@ -187,7 +191,9 @@ LRESULT CALLBACK WindowProc ( HWND hWnd , UINT uMsg , WPARAM wParam , LPARAM lPa
                 return 0 ;
 
             pHistory = (CClipboardHistory*) g_pHandlers[2];
-            pHistory->NotifyClipboardUpdate(uMsg, wParam, lParam);
+
+            if (NULL != pHistory)
+                pHistory->NotifyClipboardUpdate(uMsg, wParam, lParam);
 
             return 0 ;
         default :
