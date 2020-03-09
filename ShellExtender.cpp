@@ -10,7 +10,6 @@
 
 #include "LayoutSwitcher.h"
 #include "ShellExecutor.h"
-#include "ClipboardHistory.h"
 #include "DummyTextGenerator.h"
 #include "ZOrderChanger.h"
 #include "utils.h"
@@ -21,7 +20,7 @@
 #define WINDOWCLASS_NAME L"LIVEKEYS"
 #define SHUTDOWN_KEY VK_SCROLL // this key press means that application should be closed
 
-#define NUM_LIVEKEYS_HANDLERS 5 // number of registered live keys handlers
+#define NUM_LIVEKEYS_HANDLERS 4 // number of registered live keys handlers
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // Function prototypes
@@ -83,9 +82,8 @@ int APIENTRY _tWinMain ( HINSTANCE hInstance ,
     // Initialize array of handlers. Note to app extenders: register your hotkey handlers here.
     g_pHandlers[0] = new CLayoutSwitcher();
     g_pHandlers[1] = new CShellExecutor();
-    g_pHandlers[2] = new CClipboardHistory();
-    g_pHandlers[3] = new CDummyTextGenerator();
-    g_pHandlers[4] = new CZOrderChanger();
+    g_pHandlers[2] = new CDummyTextGenerator();
+    g_pHandlers[3] = new CZOrderChanger();
     
     for (BYTE index = 0; index < NUM_LIVEKEYS_HANDLERS; index++)
     {
@@ -144,7 +142,6 @@ LRESULT CALLBACK WindowProc ( HWND hWnd , UINT uMsg , WPARAM wParam , LPARAM lPa
     bool isValidEvent ;
     BYTE bHandlerID ;
     BYTE bHotkeyID ;
-    CClipboardHistory* pHistory ;
 
     switch ( uMsg )
     {
@@ -179,21 +176,6 @@ LRESULT CALLBACK WindowProc ( HWND hWnd , UINT uMsg , WPARAM wParam , LPARAM lPa
                            ( NULL != g_pHandlers [ wParam ] ) ;
             if ( isValidEvent )
                 g_pHandlers [ wParam ]->HandleCommand ( lParam ) ;
-
-            return 0 ;
-        case WM_CLIPBOARDUPDATE:
-            // It appears that SetClipboardViewer function sends WM_DRAWCLIPBOARD message to the
-            // window whose handle is being passed to it, but this call is totally useless for us.
-            // Also it cannot be passed to the next window in the chain as we don't have it's handle
-            // yet. So just ignore this message for the first time.
-            if ( NULL == g_hHook ) // Hook is being set up after initialization so that's a good way
-                                   // to check whether this is the first message
-                return 0 ;
-
-            pHistory = (CClipboardHistory*) g_pHandlers[2];
-
-            if (NULL != pHistory)
-                pHistory->NotifyClipboardUpdate(uMsg, wParam, lParam);
 
             return 0 ;
         default :

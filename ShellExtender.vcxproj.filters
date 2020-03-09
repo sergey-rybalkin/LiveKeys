@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ClipboardHistory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="LayoutSwitcher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -44,9 +41,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ClipboardHistory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="LayoutSwitcher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
