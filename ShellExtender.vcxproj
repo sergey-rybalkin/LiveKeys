@@ -97,6 +97,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>livekeys</TargetName>
+    <EnableMicrosoftCodeAnalysis>false</EnableMicrosoftCodeAnalysis>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -205,6 +206,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DummyTextGenerator.cpp" />
+    <ClCompile Include="FileGuard.cpp" />
     <ClCompile Include="LayoutSwitcher.cpp" />
     <ClCompile Include="LiveKeysHandler.cpp" />
     <ClCompile Include="ShellExecutor.cpp" />
@@ -220,6 +222,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DummyTextGenerator.h" />
+    <ClInclude Include="FileGuard.h" />
     <ClInclude Include="LayoutSwitcher.h" />
     <ClInclude Include="LiveKeysHandler.h" />
     <ClInclude Include="Resource.h" />

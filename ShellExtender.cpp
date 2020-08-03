@@ -6,6 +6,7 @@
 #include "ShellExecutor.h"
 #include "DummyTextGenerator.h"
 #include "ZOrderChanger.h"
+#include "FileGuard.h"
 #include "utils.h"
 
 // Constants definition
@@ -13,7 +14,7 @@
 #define WINDOWCLASS_NAME L"LIVEKEYS"
 #define SHUTDOWN_KEY VK_SCROLL // this key press means that application should be closed
 
-#define NUM_LIVEKEYS_HANDLERS 4 // number of registered live keys handlers
+#define NUM_LIVEKEYS_HANDLERS 5 // number of registered live keys handlers
 
 // Function prototypes
 LRESULT CALLBACK WindowProc(HWND, UINT, WPARAM, LPARAM);
@@ -76,6 +77,7 @@ int APIENTRY _tWinMain(
     g_pHandlers[1] = new CShellExecutor();
     g_pHandlers[2] = new CDummyTextGenerator();
     g_pHandlers[3] = new CZOrderChanger();
+    g_pHandlers[4] = new CFileGuard();
 
     for (BYTE index = 0; index < NUM_LIVEKEYS_HANDLERS; index++)
     {
@@ -103,10 +105,23 @@ int APIENTRY _tWinMain(
 
     // And finally start message handling loop.
     MSG msg;
-    while (GetMessage(&msg, NULL, 0, 0))
+    while (1)
     {
-        TranslateMessage(&msg);
-        DispatchMessage(&msg);
+        // Using MsgWaitForMultipleObjectsEx instead of GetMessage in order to be able to support async IO 
+        // andreceive APC calls in between window and hook message handling.
+        DWORD dwRet = MsgWaitForMultipleObjectsEx(0, NULL, INFINITE, QS_ALLINPUT, MWMO_ALERTABLE);
+        if (dwRet != WAIT_OBJECT_0)
+            continue;
+
+        const BOOL bMsgAvailable = PeekMessage(&msg, NULL, 0, 0, PM_REMOVE);
+        if (bMsgAvailable)
+        {
+            TranslateMessage(&msg);
+            DispatchMessage(&msg);
+
+            if (msg.message == WM_QUIT)
+                break;
+        }
     }
 
     // Some cleanup here

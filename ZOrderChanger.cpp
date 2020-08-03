@@ -32,7 +32,7 @@ BOOL CZOrderChanger::Initialize(
 // Is called every time WM_HOTKEY window message is received. We have only one hotkey - the one that
 // displays popup menu with the recent clipboard history items listed. Once user selects something
 // from this menu we will paste it into the windows clipboard.
-VOID CZOrderChanger::HandleHotkey(BYTE bHotkeyID, DWORD dwHotkey) noexcept
+VOID CZOrderChanger::HandleHotkey(BYTE bHotkeyID, DWORD dwHotkey)
 {
     UNREFERENCED_PARAMETER(dwHotkey);
     UNREFERENCED_PARAMETER(bHotkeyID);

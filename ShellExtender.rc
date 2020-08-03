@@ -83,6 +83,7 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 // remains consistent on all systems.
 IDI_SHELLEXTENDER       ICON                    "ShellExtender.ico"
 
+
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -149,6 +150,7 @@ BEGIN
     IDS_LIPSUM2             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id justo massa."
     IDS_LIPSUM3             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id justo massa. Mauris nisi odio, sodales non euismod ullamcorper, varius eu ligula. Phasellus at dolor et mi commodo molestie id ac ligula. Pellentesque at enim nisl. Morbi vitae nulla ac lorem facilisis posuere."
     IDS_LIPSUM4             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id justo massa. Mauris nisi odio, sodales non euismod ullamcorper, varius eu ligula. Phasellus at dolor et mi commodo molestie id ac ligula. Pellentesque at enim nisl. Morbi vitae nulla ac lorem facilisis posuere. Nam rhoncus consequat ligula nec varius. Suspendisse ut libero velit. Mauris faucibus lorem accumsan nisl facilisis in ultricies tortor luctus. Ut ut nulla bibendum mi interdum pellentesque vel eleifend metus. Nullam eget purus vel purus venenatis condimentum in nec mauris. Mauris neque enim, luctus id porttitor quis, ullamcorper id tortor. Sed lobortis, nibh vitae facilisis luctus, nulla felis convallis nulla, faucibus sodales augue ipsum nec arcu. Suspendisse non nisl felis, in adipiscing felis. Etiam a nunc mauris. Vestibulum nisi tortor, blandit in elementum eget, feugiat eget turpis. Aliquam erat volutpat. "
+    IDS_ERROR_FILE_GUARD    "Unexpected error occured in File Guard"
 END
 
 #endif    // English (United States) resources

@@ -24,6 +24,7 @@
 #define IDS_LIPSUM2                     118
 #define IDS_LIPSUM3                     119
 #define IDS_LIPSUM4                     120
+#define IDS_ERROR_FILE_GUARD            121
 #define IDR_MAINFRAME                   128
 #define IDC_STATIC                      -1
 
