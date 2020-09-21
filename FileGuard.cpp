@@ -22,7 +22,8 @@ VOID CALLBACK WatchCompletion(DWORD status, DWORD bytes_ret, OVERLAPPED* io_info
     if (fni->Action == FILE_ACTION_ADDED)
     {
         if ((wcsncmp(L"SQL Server Management Studio", fni->FileName, fni->FileNameLength / 2) == 0) ||
-            (wcsncmp(L"ViberDownloads", fni->FileName, fni->FileNameLength / 2) == 0))
+            (wcsncmp(L"ViberDownloads", fni->FileName, fni->FileNameLength / 2) == 0) ||
+            (wcsncmp(L"Custom Office Templates", fni->FileName, fni->FileNameLength / 2) == 0))
         {
             WCHAR targetPath[MAX_PATH] = { 0 };
             StringCchCopy(targetPath, MAX_PATH, TARGET_DIRECTORY);
