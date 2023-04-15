@@ -24,7 +24,7 @@ BOOL CZOrderChanger::Initialize(
     FPN_REGISTER_HOTKEY fpnRegisterHotkey)
 {
     CLiveKeysHandler::Initialize(bHandlerID, hwndMainWindow, hInstance, fpnRegisterHotkey);
-    m_bStayOnTopHotkeyID = fpnRegisterHotkey(bHandlerID, MOD_CONTROL | MOD_WIN, VkKeyScan(L'q'));
+    m_bStayOnTopHotkeyID = fpnRegisterHotkey(bHandlerID, MOD_SHIFT | MOD_WIN, VkKeyScan(L'q'));
 
     return m_bStayOnTopHotkeyID > 0;
 }
