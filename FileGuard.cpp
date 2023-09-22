@@ -3,12 +3,13 @@
 #include "FileGuard.h"
 #include "shellapi.h"
 #include "strsafe.h"
+#include "shlobj.h"
 
 #define NOTIFICATION_BUFFER_SIZE 16384
-#define TARGET_DIRECTORY L"C:\\Users\\Sergey\\Documents\\"
 
 HANDLE m_hDir;
 LPVOID m_lpNotificationBuf;
+PWSTR m_pwstrTargetDirectory;
 
 BOOL StartMonitor();
 
@@ -27,7 +28,8 @@ VOID CALLBACK WatchCompletion(DWORD status, DWORD bytes_ret, OVERLAPPED* io_info
             (wcsncmp(L"Custom Office Templates", fni->FileName, fni->FileNameLength / 2) == 0))
         {
             WCHAR targetPath[MAX_PATH] = { 0 };
-            StringCchCopy(targetPath, MAX_PATH, TARGET_DIRECTORY);
+            StringCchCopy(targetPath, MAX_PATH, m_pwstrTargetDirectory);
+            StringCchCatN(targetPath, MAX_PATH, _T("\\"), 1);
             StringCchCatN(targetPath, MAX_PATH, fni->FileName, fni->FileNameLength / 2);
 
             SHFILEOPSTRUCT sh = { 0 };
@@ -87,7 +89,10 @@ BOOL CFileGuard::Initialize(
     m_hInstance = hInstance;
     m_hwndMainWindow = hwndMainWindow;
 
-    m_hDir = CreateFile(TARGET_DIRECTORY,
+    if (FAILED(SHGetKnownFolderPath(FOLDERID_Documents, KF_FLAG_DEFAULT, NULL, &m_pwstrTargetDirectory)))
+        return FALSE;
+
+    m_hDir = CreateFile(m_pwstrTargetDirectory,
         GENERIC_READ,
         FILE_SHARE_DELETE | FILE_SHARE_READ | FILE_SHARE_WRITE,
         NULL,
