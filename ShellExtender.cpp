@@ -7,6 +7,7 @@
 #include "DummyTextGenerator.h"
 #include "ZOrderChanger.h"
 #include "FileGuard.h"
+#include "ChildLock.h"
 #include "utils.h"
 
 // Constants definition
@@ -14,7 +15,7 @@
 #define WINDOWCLASS_NAME L"LIVEKEYS"
 #define SHUTDOWN_KEY VK_SCROLL // this key press means that application should be closed
 
-#define NUM_LIVEKEYS_HANDLERS 5 // number of registered live keys handlers
+#define NUM_LIVEKEYS_HANDLERS 6 // number of registered live keys handlers
 
 // Function prototypes
 LRESULT CALLBACK WindowProc(HWND, UINT, WPARAM, LPARAM);
@@ -78,6 +79,7 @@ int APIENTRY _tWinMain(
     g_pHandlers[2] = new CDummyTextGenerator();
     g_pHandlers[3] = new CZOrderChanger();
     g_pHandlers[4] = new CFileGuard();
+    g_pHandlers[5] = new CChildLock();
 
     for (BYTE index = 0; index < NUM_LIVEKEYS_HANDLERS; index++)
     {
@@ -108,7 +110,7 @@ int APIENTRY _tWinMain(
     while (1)
     {
         // Using MsgWaitForMultipleObjectsEx instead of GetMessage in order to be able to support async IO 
-        // andreceive APC calls in between window and hook message handling.
+        // and receive APC calls in between window and hook message handling.
         DWORD dwRet = MsgWaitForMultipleObjectsEx(0, NULL, INFINITE, QS_ALLINPUT, MWMO_ALERTABLE);
         if (dwRet != WAIT_OBJECT_0)
             continue;
@@ -230,7 +232,7 @@ VOID CALLBACK UnregisterHandlerHotkey(BYTE bHandlerID, BYTE bHotkeyID)
 // A LowLevelHookProc implementation that captures all supported hotkeys
 LRESULT CALLBACK LowLevelHookProc(int nCode, WPARAM wParam, LPARAM lParam)
 {
-    // MSDN docs specify that both LL keybd & mouse hook should return in this case.
+    // MSDN docs specify that both LL keyboard & mouse hook should return in this case.
     if (nCode != HC_ACTION)
         return CallNextHookEx(g_hHook, nCode, wParam, lParam);
 
@@ -262,7 +264,7 @@ LRESULT CALLBACK LowLevelHookProc(int nCode, WPARAM wParam, LPARAM lParam)
     }
 
     // Pressing the stop key is the fast way to shutdown this application. This check should be
-    // the last one in this function because it is rearly used.
+    // the last one in this function because it is rarely used.
     if (SHUTDOWN_KEY == pKb->vkCode)
     {
         PostMessage(g_hWnd, WM_CLOSE, 0, 0);

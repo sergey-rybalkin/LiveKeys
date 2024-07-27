@@ -208,6 +208,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ChildLock.cpp" />
     <ClCompile Include="DummyTextGenerator.cpp" />
     <ClCompile Include="FileGuard.cpp" />
     <ClCompile Include="LayoutSwitcher.cpp" />
@@ -224,6 +225,7 @@
     <ClCompile Include="ZOrderChanger.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ChildLock.h" />
     <ClInclude Include="DummyTextGenerator.h" />
     <ClInclude Include="FileGuard.h" />
     <ClInclude Include="LayoutSwitcher.h" />

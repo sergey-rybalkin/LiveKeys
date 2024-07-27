@@ -30,8 +30,8 @@ LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,1
- PRODUCTVERSION 1,0,0,1
+ FILEVERSION 1,1,0,1
+ PRODUCTVERSION 1,1,0,1
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -54,7 +54,7 @@ BEGIN
             VALUE "LegalCopyright", "Copyright (C) 2009"
             VALUE "OriginalFilename", "ShellExt.exe"
             VALUE "ProductName", "Shell Extender (live keys)"
-            VALUE "ProductVersion", "1, 0, 0, 1"
+            VALUE "ProductVersion", "1, 1, 0, 1"
         END
     END
     BLOCK "VarFileInfo"
