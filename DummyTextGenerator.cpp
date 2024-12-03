@@ -30,7 +30,7 @@ BOOL CDummyTextGenerator::Initialize(
     m_hInstance = hInstance;
     m_hwndMainWindow = hwndMainWindow;
 
-    m_bShowDummyTextMenuHotkeyID = fpnRegisterHotkey(bHandlerID, MOD_CONTROL | MOD_WIN, VkKeyScan(L'x'));
+    m_bShowDummyTextMenuHotkeyID = fpnRegisterHotkey(bHandlerID, MOD_SHIFT | MOD_WIN, VkKeyScan(L'x'));
 
     return m_bShowDummyTextMenuHotkeyID > 0;
 }
