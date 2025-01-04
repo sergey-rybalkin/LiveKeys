@@ -30,7 +30,7 @@ BOOL CChildLock::Initialize(
     m_hInstance = hInstance;
     m_hwndMainWindow = hwndMainWindow;
 
-    m_bLockInputHotkeyID = fpnRegisterHotkey(bHandlerID, MOD_CONTROL | MOD_WIN, VkKeyScan(L'b'));
+    m_bLockInputHotkeyID = fpnRegisterHotkey(bHandlerID, MOD_SHIFT | MOD_WIN, VkKeyScan(L'b'));
 
     return TRUE;
 }
