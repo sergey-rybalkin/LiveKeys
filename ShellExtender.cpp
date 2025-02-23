@@ -91,7 +91,8 @@ int APIENTRY _tWinMain(
 
         if (!bInitialized)
         {
-            ShowCustomError(IDS_CAPTION_ERROR, IDS_ERROR_HANDLER_NOT_INITIALIZED);
+            ShowCustomErrorFormat(IDS_CAPTION_ERROR, IDS_ERROR_HANDLER_NOT_INITIALIZED, index);
+
             delete g_pHandlers[index];
             g_pHandlers[index] = NULL;
         }

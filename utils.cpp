@@ -19,6 +19,33 @@ VOID ShowCustomError(UINT uiCaptionStringID, UINT uiMsgStringID)
         MessageBox(NULL, szCustomMsg, szCaption, MB_OK | MB_ICONERROR);
 }
 
+VOID ShowCustomErrorFormat(UINT uiCaptionStringID, UINT uiMsgStringID, ...)
+{
+    va_list args;
+    va_start(args, uiMsgStringID);
+
+    // Load custom strings if specified
+    TCHAR szCaption[256];
+    TCHAR szCustomMsg[256];
+    int iRetVal = LoadString(g_hInst, uiCaptionStringID, (LPTSTR)&szCaption, 256);
+    if (0 == iRetVal)
+        StringCchCopy(szCaption, 256, TEXT("Caption too big"));
+    iRetVal = LoadString(g_hInst, uiMsgStringID, (LPTSTR)&szCustomMsg, 256);
+    if (0 == iRetVal)
+        StringCchCopy(szCaption, 256, TEXT("Caption too big"));
+    // Show custom error message if specified, then show system error message.
+    if (szCustomMsg && szCaption)
+    {
+        TCHAR szCustomMsgFmt[256];
+        HRESULT hr = StringCchVPrintf(szCustomMsgFmt, 256, szCustomMsg, args);
+        if (FAILED(hr))
+            return; // message is too long, just skip it
+        MessageBox(NULL, szCustomMsgFmt, szCaption, MB_OK | MB_ICONERROR);
+    }
+
+    va_end(args);
+}
+
 // Translates Win32 error into a text equivalent
 VOID ShowWin32Error(DWORD dwErrorCode, UINT uiCaptionStringID, UINT uiMsgStringID)
 {

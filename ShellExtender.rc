@@ -30,8 +30,8 @@ LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,1,0,2
- PRODUCTVERSION 1,1,0,2
+ FILEVERSION 1,1,2,2
+ PRODUCTVERSION 1,1,2,2
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -49,12 +49,12 @@ BEGIN
             VALUE "Comments", "Shell extender utility - hotkeys manager and clipboard extender"
             VALUE "CompanyName", "Sergey Rybalkin"
             VALUE "FileDescription", "Shell Extender (live keys) main module"
-            VALUE "FileVersion", "1.1.0.2"
+            VALUE "FileVersion", "1.1.2.2"
             VALUE "InternalName", "livekeys"
-            VALUE "LegalCopyright", "Copyright (C) 2024"
+            VALUE "LegalCopyright", "Copyright (C) 2025"
             VALUE "OriginalFilename", "ShellExt.exe"
             VALUE "ProductName", "Shell Extender (live keys)"
-            VALUE "ProductVersion", "1.1.0.2"
+            VALUE "ProductVersion", "1.1.2.2"
         END
     END
     BLOCK "VarFileInfo"
@@ -143,7 +143,7 @@ BEGIN
     IDS_ERROR_PARAMS_READ   "Could not read command line parameters for % hotkey"
     IDS_ERROR_PATH_READ     "Could not read path for % hotkey"
     IDS_ERROR_HANDLER_NOT_INITIALIZED 
-                            "At least one of the handlers failed to initialize"
+                            "Handler with ID=%d failed to initialize"
     IDS_ERROR_HOTKEY_CLEANUP_FAILED 
                             "Could not unregister hotkey for handler %"
     IDS_LIPSUM1             "Lorem ipsum dolor sit amet"

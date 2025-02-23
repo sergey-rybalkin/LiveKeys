@@ -41,7 +41,9 @@ BOOL CShellExecutor::Initialize(
     if (ERROR_SUCCESS != lRetVal)
     {
         DbgPrintWin32Error(lRetVal, IDS_ERROR_NO_EXECUTOR_KEY);
-        return FALSE;
+
+        // If there is no such key probably the system does not rely on our application hotkeys functionality
+        return TRUE;
     }
 
     if (!AllocateMemoryForHotkeys(hExecutorKey))
