@@ -22,7 +22,7 @@ VOID CALLBACK WatchCompletion(DWORD status, DWORD bytes_ret, OVERLAPPED* io_info
     FILE_NOTIFY_INFORMATION* fni = (FILE_NOTIFY_INFORMATION*)m_lpNotificationBuf;
     if (fni->Action == FILE_ACTION_ADDED)
     {
-        if ((wcsncmp(L"SQL Server Management Studio", fni->FileName, fni->FileNameLength / 2) == 0) ||
+        if ((wcsncmp(L"SQL Server Management Studio 21", fni->FileName, fni->FileNameLength / 2) == 0) ||
             (wcsncmp(L"Adobe", fni->FileName, fni->FileNameLength / 2) == 0) ||
             (wcsncmp(L"Visual Studio 2017", fni->FileName, fni->FileNameLength / 2) == 0) ||
             (wcsncmp(L"Custom Office Templates", fni->FileName, fni->FileNameLength / 2) == 0))
