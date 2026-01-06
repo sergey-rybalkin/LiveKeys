@@ -160,6 +160,25 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
         PostQuitMessage(0);
         return 0;
 
+    case WM_POWERBROADCAST:
+        if (wParam == PBT_APMRESUMEAUTOMATIC || wParam == PBT_APMRESUMESUSPEND)
+        {
+            // System is resuming from sleep/hibernation
+            // Unhook and re-hook to restore keyboard hook functionality
+            if (g_hHook != NULL)
+            {
+                UnhookWindowsHookEx(g_hHook);
+                g_hHook = NULL;
+            }
+            
+            g_hHook = SetWindowsHookEx(WH_KEYBOARD_LL, LowLevelHookProc, GetModuleHandle(NULL), 0);
+            if (NULL == g_hHook)
+            {
+                ShowCustomError(IDS_CAPTION_ERROR, IDS_ERROR_HOOK_FAILED);
+            }
+        }
+        return TRUE;
+
     case WM_HOTKEY:
         // wParam stores hotkey ID which is actually a word value. low byte is our internal
         // hotkey ID and high byte is handler id - it's index in g_pHandlers array.

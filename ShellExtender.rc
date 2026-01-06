@@ -30,8 +30,8 @@ LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,1,3,0
- PRODUCTVERSION 1,1,3,0
+ FILEVERSION 1,1,5,0
+ PRODUCTVERSION 1,1,5,0
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -49,12 +49,12 @@ BEGIN
             VALUE "Comments", "Shell extender utility - hotkeys manager and clipboard extender"
             VALUE "CompanyName", "Sergey Rybalkin"
             VALUE "FileDescription", "Shell Extender (live keys) main module"
-            VALUE "FileVersion", "1.1.2.2"
+            VALUE "FileVersion", "1.1.5.0"
             VALUE "InternalName", "livekeys"
             VALUE "LegalCopyright", "Copyright (C) 2025"
             VALUE "OriginalFilename", "ShellExt.exe"
             VALUE "ProductName", "Shell Extender (live keys)"
-            VALUE "ProductVersion", "1.1.2.2"
+            VALUE "ProductVersion", "1.1.5.0"
         END
     END
     BLOCK "VarFileInfo"
